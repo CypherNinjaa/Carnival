@@ -1,355 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHPHILIA 8.0 - Annual Technical Event 2025</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(255, 193, 7, 0.1) 100%);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #00C853;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .button-hover {
-            transition: transform 0.3s ease;
-        }
-        .button-hover:hover {
-            transform: translateY(-2px);
-        }
-        .event-card {
-            transition: all 0.3s ease;
-        }
-        .event-card:hover {
-            transform: translateY(-8px);
-        }
-        .event-card-overlay {
-            transition: opacity 0.3s ease;
-        }
-        .event-card:hover .event-card-overlay {
-            opacity: 1;
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#00C853',
-                        secondary: '#FFC107',
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="overflow-x-hidden">
-    <!-- Header/Navigation -->
-    <header class="fixed w-full bg-white z-50 shadow-md">
-        <nav class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold">
-                        <span class="text-primary">TECH</span><span class="text-black">PHILIA</span>
-                        <span class="text-secondary">8.0</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="nav-link text-gray-700 hover:text-primary transition">Home</a>
-                    <a href="#events" class="nav-link text-gray-700 hover:text-primary transition">Events</a>
-                    <a href="#gallery" class="nav-link text-gray-700 hover:text-primary transition">Gallery</a>
-                    <a href="#leadership" class="nav-link text-gray-700 hover:text-primary transition">Leadership</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-primary transition">About</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-700">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="#" class="block py-2 text-gray-700 hover:text-primary transition">Home</a>
-                <a href="#events" class="block py-2 text-gray-700 hover:text-primary transition">Events</a>
-                <a href="#gallery" class="block py-2 text-gray-700 hover:text-primary transition">Gallery</a>
-                <a href="#leadership" class="block py-2 text-gray-700 hover:text-primary transition">Leadership</a>
-                <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a>
-                <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition">Contact</a>
-            </div>
-        </nav>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CARNIVALESQUE 4.0 | AUP</title>
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- swiper css -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<!-- Font Awesome CDN for icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			integrity="sha512-..."
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center bg-gray-900">
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/random/1920x1080/?technology,event" alt="Tech Event Background" class="w-full h-full object-cover opacity-30">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"></div>
-        </div>
-        <div class="relative z-10 text-center px-4">
-            <p class="text-yellow-400 text-xl mb-4">Annual Technical Event 2025</p>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                <span class="text-primary">TECH</span><span class="text-white">PHILIA</span>
-                <span class="text-secondary">8.0</span>
-            </h1>
-            <p class="text-green-400 text-3xl md:text-4xl font-bold mb-8">IGNITE INNOVATION, EMBRACE THE FUTURE</p>
-            <p class="text-white text-lg md:text-xl mb-12 max-w-3xl mx-auto">
-                The Annual Technical Extravaganza - Where Innovation Meets Excellence. Join us for three days of cutting-edge technology, competitions, workshops, and networking opportunities.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#events" class="button-hover bg-primary hover:bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">
-                    Explore Events
-                </a>
-                <a href="#register" class="button-hover bg-secondary hover:bg-yellow-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">
-                    Registration
-                </a>
-            </div>
-        </div>
-    </section>
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<script src="script.js" defer></script>
+	</head>
+	<body class="overflow-x-hidden">
+		<!-- Header/Navigation -->
+		<header class="fixed w-full bg-white z-50 shadow-md">
+			<nav class="container mx-auto px-6 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="#home" class="text-2xl font-bold">
+							<span class="text-primary">CARNIV</span
+							><span class="text-black">ALESQUE</span>
+							<span class="text-secondary">4.0</span>
+						</a>
+					</div>
+					<div class="hidden md:flex items-center space-x-8">
+						<a
+							href="#home"
+							class="nav-link font-medium text-gray-600 hover:text-gray-900"
+							><b>Home</b></a
+						>
+						<a
+							href="#events"
+							class="nav-link text-gray-700 hover:text-primary transition"
+							><b>Events</b></a
+						>
+						<a
+							href="#gallery"
+							class="nav-link text-gray-700 hover:text-primary transition"
+							><b>Gallery</b></a
+						>
+						<!-- <a
+							href="#leadership"
+							class="nav-link text-gray-700 hover:text-primary transition"
+							><b>Leadership</b></a
+						> -->
+						<a
+							href="#about"
+							class="nav-link text-gray-700 hover:text-primary transition"
+							><b>About</b></a
+						>
+						<a
+							href="#contact"
+							class="nav-link text-gray-700 hover:text-primary transition"
+							><b>Contact</b></a
+						>
+					</div>
+					<div class="md:hidden">
+						<button id="menu-toggle" class="text-gray-700">
+							<i class="fas fa-bars text-2xl"></i>
+						</button>
+					</div>
+				</div>
+				<!-- Mobile Menu -->
+				<div id="mobile-menu" class="hidden md:hidden mt-4">
+					<a
+						href="#home"
+						class="block py-2 text-gray-700 hover:text-primary transition"
+						><b>Home</b></a
+					>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">About The Event</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative group">
-                    <img src="https://source.unsplash.com/random/800x600/?conference,tech" alt="Tech Conference" class="rounded-lg shadow-xl transition-transform duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Join Us for an Unforgettable Experience</h3>
-                    <p class="text-gray-600 mb-6">
-                        TECHPHILIA 8.0 is more than just an event - it's a celebration of innovation, creativity, and technological advancement. Over three action-packed days, participants will have the opportunity to:
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-primary mr-3"></i>
-                            <span>Engage with industry experts and thought leaders</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-primary mr-3"></i>
-                            <span>Participate in cutting-edge workshops and competitions</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-primary mr-3"></i>
-                            <span>Network with fellow tech enthusiasts and professionals</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-primary mr-3"></i>
-                            <span>Experience the latest in technology and innovation</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+					<a
+						href="#events"
+						class="block py-2 text-gray-700 hover:text-primary transition"
+						><b>Events</b></a
+					>
+					<a
+						href="#gallery"
+						class="block py-2 text-gray-700 hover:text-primary transition"
+						><b>Gallery</b></a
+					>
+					<a
+						href="#leadership"
+						class="block py-2 text-gray-700 hover:text-primary transition"
+						><b>Leadership</b></a
+					>
+					<a
+						href="#about"
+						class="block py-2 text-gray-700 hover:text-primary transition"
+						><b>About</b></a
+					>
+					<a
+						href="#contact"
+						class="block py-2 text-gray-700 hover:text-primary transition"
+						><b>Contact</b></a
+					>
+				</div>
+			</nav>
+		</header>
 
-    <!-- Events Section -->
-    <section id="events" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Featured Events</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Event Card 1 -->
-                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://source.unsplash.com/random/400x300/?hackathon" alt="Hackathon" class="w-full h-48 object-cover">
-                        <div class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">24-Hour Hackathon</h3>
-                        <p class="text-gray-600 mb-4">Build innovative solutions to real-world problems in this intense coding competition.</p>
-                        <a href="#" class="text-primary font-semibold hover:text-green-600 flex items-center group">
-                            Learn More 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Event Card 2 -->
-                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://source.unsplash.com/random/400x300/?workshop" alt="Workshop" class="w-full h-48 object-cover">
-                        <div class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Tech Workshops</h3>
-                        <p class="text-gray-600 mb-4">Hands-on sessions on AI, blockchain, cloud computing, and more.</p>
-                        <a href="#" class="text-primary font-semibold hover:text-green-600 flex items-center group">
-                            Learn More 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Event Card 3 -->
-                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://source.unsplash.com/random/400x300/?tech-talk" alt="Tech Talk" class="w-full h-48 object-cover">
-                        <div class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Tech Talks</h3>
-                        <p class="text-gray-600 mb-4">Inspiring presentations from industry leaders and innovators.</p>
-                        <a href="#" class="text-primary font-semibold hover:text-green-600 flex items-center group">
-                            Learn More 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<!-- Hero Section -->
+		<section
+			id="home"
+			class="relative min-h-screen flex flex-col items-center justify-center bg-gray-900"
+		>
+			<!-- Background Image & Overlay -->
+			<div class="absolute inset-0">
+				<img
+					src="https://source.unsplash.com/random/1920x1080/?technology,event"
+					alt="Tech Event Background"
+					class="w-full h-full object-cover opacity-30"
+				/>
+				<div
+					class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"
+				></div>
+			</div>
 
-    <!-- Registration Section -->
-    <section id="register" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Register Now</h2>
-            <div class="max-w-2xl mx-auto">
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-gray-700 mb-2">First Name</label>
-                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary" required>
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 mb-2">Last Name</label>
-                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary" required>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-2">Email Address</label>
-                        <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary" required>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-2">Institution/Organization</label>
-                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary" required>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-2">Select Events</label>
-                        <select multiple class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary" required>
-                            <option>24-Hour Hackathon</option>
-                            <option>Tech Workshops</option>
-                            <option>Tech Talks</option>
-                            <option>Coding Competition</option>
-                            <option>Project Exhibition</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-green-600 transition">
-                        Register Now
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+			<!-- Content -->
+			<div class="relative z-10 text-center px-4">
+				<p class="text-yellow-400 text-xl mb-4">
+					Annual Literary & Cultural Fest 2025
+				</p>
+				<h1 class="text-4xl md:text-7xl font-bold mb-6">
+					<span class="text-primary">CARNIV</span
+					><span class="text-white">ALESQUE</span>
+					<span class="text-secondary">4.0</span>
+				</h1>
+				<p class="text-1xl md:text-1xl font-bold mb-8">
+					<span id="typing-container" class="text-green-400"
+						><span id="typed-text"></span><span id="cursor">|</span></span
+					>
+				</p>
+				<p class="text-white text-lg md:text-xl mb-12 max-w-3xl mx-auto">
+					Step into a world where stories come alive, ideas collide, and
+					creativity takes center stage. Hosted by AIESR, Carnivalesque 4.0 is
+					your gateway to literary thrills, vibrant competitions, and
+					unforgettable moments.
+				</p>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
-                    <div class="space-y-4">
-                        <p class="flex items-center">
-                            <i class="fas fa-map-marker-alt w-8"></i>
-                            <span>123 Tech Street, Innovation City, 12345</span>
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fas fa-phone w-8"></i>
-                            <span>+1 234 567 8900</span>
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fas fa-envelope w-8"></i>
-                            <span>info@techphilia.com</span>
-                        </p>
-                    </div>
-                    <div class="mt-8 flex space-x-4">
-                        <a href="#" class="text-white hover:text-primary transition">
-                            <i class="fab fa-facebook-f text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-white hover:text-primary transition">
-                            <i class="fab fa-twitter text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-white hover:text-primary transition">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-white hover:text-primary transition">
-                            <i class="fab fa-linkedin-in text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Your Name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary" required>
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Your Email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary" required>
-                        </div>
-                        <div>
-                            <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-green-600 transition">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+				<!-- Buttons -->
+				<div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+					<a
+						href="#events"
+						class="button-hover bg-primary hover:bg-green-00 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg"
+					>
+						Explore Events
+					</a>
+					<a
+						href="#register"
+						class="button-hover bg-secondary hover:bg-yellow-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg"
+					>
+						Registration
+					</a>
+				</div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 TECHPHILIA 8.0. All rights reserved.</p>
-        </div>
-    </footer>
+				<!-- Countdown Timer -->
+				<div class="text-center py-6 bg-transparent">
+					<h2 class="text-2xl font-semibold text-white mb-4">
+						Event Begins In
+					</h2>
+					<div
+						id="countdown"
+						class="flex justify-center gap-6 text-3xl font-bold text-white"
+					>
+						<div>
+							<span id="days">00</span>
+							<div class="text-xs mt-2 tracking-widest">DAYS</div>
+						</div>
+						<div>
+							<span id="hours">00</span>
+							<div class="text-xs mt-2 tracking-widest">HOURS</div>
+						</div>
+						<div>
+							<span id="minutes">00</span>
+							<div class="text-xs mt-2 tracking-widest">MINUTES</div>
+						</div>
+						<div>
+							<span id="seconds">00</span>
+							<div class="text-xs mt-2 tracking-widest">SECONDS</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+		<!-- Events Section -->
+		<section id="events" class="py-20 bg-gray-100">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-bold text-center mb-12">Featured Events</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- Event Card 1 -->
+					<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden">
+						<div class="relative">
+							<img
+								src="assets/dance & folic.jpg"
+								alt="Dance & Frolic"
+								class="w-full h-auto object-contain bg-white"
+							/>
+							<div
+								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
+							></div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">Dance & Frolic</h3>
+							<p class="text-gray-600 mb-4">
+								Celebrate culture, rhythm, and creativity in this vibrant dance
+								showdown that brings traditions to life.
+							</p>
+							<div class="flex space-x-3">
+								<button
+									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+									data-event="dance"
+								>
+									Info
+								</button>
+								<a
+									href="#"
+									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
+								>
+									Register
+								</a>
+							</div>
+						</div>
+					</div>
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+					<!-- Event Card 2 -->
+					<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden">
+						<div class="relative">
+							<img
+								src="assets/drawmics.jpg"
+								alt="DrawMics"
+								class="w-full h-auto object-contain bg-white"
+							/>
+							<div
+								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
+							></div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">DrawMics</h3>
+							<p class="text-gray-600 mb-4">
+								Unleash your imagination through powerful comic
+								storytelling—where every panel speaks louder than words.
+							</p>
+							<div class="flex space-x-3">
+								<button
+									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+									data-event="DrawMics"
+								>
+									Info
+								</button>
+								<a
+									href="#"
+									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
+								>
+									Register
+								</a>
+							</div>
+						</div>
+					</div>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
+					<!-- Event Card 3 -->
+					<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden">
+						<div class="relative">
+							<img
+								src="assets/quizard.jpg"
+								alt="Quizards"
+								class="w-full h-auto object-contain bg-white"
+							/>
+							<div
+								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
+							></div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">Quizards</h3>
+							<p class="text-gray-600 mb-4">
+								Dive into a world where books meet the big screen—quiz your way
+								through literature, film, and fandom!
+							</p>
+							<div class="flex space-x-3">
+								<button
+									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+									data-event="Quizards"
+								>
+									Info
+								</button>
+								<a
+									href="#"
+									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
+								>
+									Register
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery section -->
+		<section id="gallery" class="gallery-section">
+			<h2
+				class="text-3xl font-bold underline mb-6 text-center"
+				style="color: rgb(255, 215, 0)"
+			>
+				Gallery
+			</h2>
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<!-- Slide 1 -->
+					<div class="swiper-slide">
+						<img src="assets/img1.jpg" alt="Event 1" />
+					</div>
+					<!-- Slide 2 -->
+					<div class="swiper-slide">
+						<img src="assets/img2.jpg" alt="Event 2" />
+					</div>
+					<!-- Slide 3 -->
+					<div class="swiper-slide">
+						<img src="assets/img3.jpg" alt="Event 3" />
+					</div>
+					<!-- Add more slides as needed -->
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-bold text-center mb-12">About The Event</h2>
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					<div class="relative group">
+						<img
+							src="assets/event.jpg"
+							alt="Tech Conference"
+							class="rounded-lg shadow-xl transition-transform duration-300 group-hover:scale-105"
+						/>
+						<div
+							class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+						></div>
+					</div>
+					<div>
+						<h3 class="text-2xl font-bold mb-4">
+							Join Us for an Unforgettable Experience
+						</h3>
+						<p class="text-gray-600 mb-6">
+							LITERARIA 2025 is more than just an event – it’s a celebration of
+							language, literature, and the limitless power of expression. Over
+							three enriching days, participants will have the opportunity to:
+						</p>
+						<ul class="space-y-4">
+							<li class="flex items-center">
+								<i class="fas fa-check-circle text-primary mr-3"></i>
+								<span>Engage with celebrated authors, poets, and scholars</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check-circle text-primary mr-3"></i>
+								<span
+									>Participate in creative writing, debating, and dramatic arts
+									competitions</span
+								>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check-circle text-primary mr-3"></i>
+								<span
+									>Network with literature enthusiasts, educators, and cultural
+									thinkers</span
+								>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check-circle text-primary mr-3"></i>
+								<span
+									>Explore evolving trends in literature, media, and
+									communication</span
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12 px-6"
+		>
+			<div class="max-w-6xl mx-auto">
+				<!-- Heading -->
+				<h2 id="contact" class="text-4xl font-bold text-center mb-8">
+					Contact Us
+					<div
+						class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto mt-2 rounded"
+					></div>
+				</h2>
+
+				<div class="grid md:grid-cols-2 gap-10">
+					<!-- Left: Contact Info -->
+					<div class="space-y-6">
+						<!-- Address -->
+						<div>
+							<div
+								class="flex items-center text-purple-700 font-semibold text-lg space-x-2"
+							>
+								<!-- Map Pin Icon -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6 text-pink-500"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M12 11c1.1046 0 2-.8954 2-2s-.8954-2-2-2-2 .8954-2 2 .8954 2 2 2zm0 0c4 0 7 3 7 7v2H5v-2c0-4 3-7 7-7z"
+									/>
+								</svg>
+								<span>Address</span>
+							</div>
+							<p class="font-bold mt-1">Amity University, Patna</p>
+							<p>
+								Police Station, Bailey Rd, near Rupaspur, Kaliket Nagar, Patna,
+								Bihar 801503
+							</p>
+						</div>
+						<!-- Responsive Google Map Embed -->
+						<div
+							class="map-container"
+							style="
+								width: 100%;
+								overflow: hidden;
+								position: relative;
+								padding-bottom: 56.25%;
+								margin-top: 20px;
+							"
+						>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7774237685253!2d85.05206687510363!3d25.612311314762536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed56457e773c5d%3A0x26f4637f762e3747!2sAmity%20University%2C%20Patna!5e0!3m2!1sen!2sin!4v1743354109568!5m2!1sen!2sin"
+								style="
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									border: 0;
+								"
+								allowfullscreen=""
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+							></iframe>
+						</div>
+						<!-- Phone -->
+						<div>
+							<div
+								class="flex items-center text-purple-700 font-semibold text-lg space-x-2"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6 text-pink-500"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.22 3.64a1 1 0 01-.21.98l-2.26 2.26a11.05 11.05 0 005.49 5.49l2.26-2.26a1 1 0 01.98-.21l3.64 1.22a1 1 0 01.68.95V19a2 2 0 01-2 2h-1c-9.39 0-17-7.61-17-17V5z"
+									/>
+								</svg>
+								<span>Phone</span>
+							</div>
+							<p class="mt-1">+91 9876543210</p>
+						</div>
+
+						<!-- Email -->
+						<div>
+							<div
+								class="flex items-center text-purple-700 font-semibold text-lg space-x-2"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6 text-pink-500"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M16 12l-4-4-4 4m8-4h-8a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-8a2 2 0 00-2-2z"
+									/>
+								</svg>
+								<span>Email</span>
+							</div>
+							<p class="mt-1">techphilia8@university.edu</p>
+						</div>
+					</div>
+
+					<!-- Right: Message Form (optional placeholder) -->
+					<!-- Right: Message Form (updated) -->
+					<div class="bg-white rounded-lg shadow-md p-6">
+						<h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
+						<form
+							action="https://formsubmit.co/vikashkelly@gmail.com"
+							method="POST"
+							class="space-y-4"
+						>
+							<!-- Form Fields with "name" attributes -->
+							<input
+								type="text"
+								name="name"
+								placeholder="Your Name"
+								class="w-full border border-gray-300 rounded px-4 py-2"
+								required
+							/>
+							<input
+								type="email"
+								name="email"
+								placeholder="Your Email"
+								class="w-full border border-gray-300 rounded px-4 py-2"
+								required
+							/>
+							<input
+								type="text"
+								name="subject"
+								placeholder="Subject"
+								class="w-full border border-gray-300 rounded px-4 py-2"
+							/>
+							<textarea
+								name="message"
+								rows="4"
+								placeholder="Your Message"
+								class="w-full border border-gray-300 rounded px-4 py-2"
+								required
+							></textarea>
+
+							<button
+								type="submit"
+								class="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-6 py-2 rounded hover:scale-105 transition-transform duration-300"
+							>
+								Send Message
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="py-12 bg-gradient-to-r from-white via-blue-50 to-purple-100 text-center"
+		>
+			<h4 class="text-4xl font-bold mb-4">Meet the Developer</h4>
+			<div
+				class="w-24 h-1 mx-auto bg-gradient-to-r from-blue-500 to-pink-500 rounded-full mb-8"
+			></div>
+
+			<div class="flex justify-center">
+				<div
+					class="bg-white rounded-xl shadow-lg p-6 max-w-xs text-center transition transform hover:scale-105"
+				>
+					<img
+						src="vikash.png"
+						alt="Developer Image"
+						class="w-32 h-32 mx-auto rounded-full border-4 border-blue-500 object-cover"
+					/>
+					<h3 class="text-xl font-semibold mt-4">Vikash</h3>
+					<p class="text-gray-500">Lead Developer</p>
+					<p class="text-sm text-gray-600 mt-2">
+						Passionate about building creative solutions that make an impact.
+						Specializes in full-stack development and AI integration.
+					</p>
+
+					<div class="flex justify-center space-x-4 mt-4 text-2xl">
+						<a
+							href="https://github.com/your-github"
+							target="_blank"
+							class="text-gray-700 hover:text-black"
+						>
+							<i class="fab fa-github"></i>
+						</a>
+						<a
+							href="https://discord.com/your-discord"
+							target="_blank"
+							class="text-purple-500 hover:text-purple-700"
+						>
+							<i class="fab fa-discord"></i>
+						</a>
+						<a
+							href="https://instagram.com/your-instagram"
+							target="_blank"
+							class="text-pink-500 hover:text-pink-700"
+						>
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a
+							href="https://linkedin.com/in/your-linkedin"
+							target="_blank"
+							class="text-blue-600 hover:text-blue-800"
+						>
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white py-8">
+			<div class="container mx-auto px-4 text-center">
+				<p>&copy; 2025 CARNIVALESQUE 4.0 All rights reserved.</p>
+			</div>
+		</footer>
+
+		<!-- Event Info Modal -->
+		<div
+			id="event-modal"
+			class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+		>
+			<div
+				class="bg-white rounded-lg max-w-md w-full mx-4 relative flex flex-col max-h-[90vh]"
+			>
+				<!-- Fixed header -->
+				<div class="p-6 border-b border-gray-200">
+					<button
+						id="close-modal"
+						class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+					>
+						<i class="fas fa-times text-xl"></i>
+					</button>
+					<h3 id="modal-title" class="text-2xl font-bold pr-8">
+						Event Information
+					</h3>
+				</div>
+
+				<!-- Scrollable content -->
+				<div
+					id="modal-content"
+					class="p-6 overflow-y-auto text-gray-600 flex-grow"
+				>
+					<!-- Content will be populated dynamically -->
+				</div>
+
+				<!-- Fixed footer with button -->
+				<div class="p-6 border-t border-gray-200">
+					<div class="flex justify-end">
+						<button
+							id="modal-register"
+							class="px-6 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
+						>
+							Register Now
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	</body>
 </html>

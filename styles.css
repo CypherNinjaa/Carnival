@@ -1,0 +1,157 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(255, 193, 7, 0.1) 100%);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #00C853;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.button-hover {
+    transition: transform 0.3s ease;
+}
+
+.button-hover:hover {
+    transform: translateY(-2px);
+}
+
+.event-card {
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+}
+
+.event-card-overlay {
+    transition: opacity 0.3s ease;
+}
+
+.event-card:hover .event-card-overlay {
+    opacity: 1;
+}
+
+/* Modal animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#event-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#event-modal > div {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Event info button hover effect */
+.info-btn, .register-btn {
+    transition: all 0.3s ease;
+}
+
+.info-btn:hover, .register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Typing effect cursor */
+#cursor {
+    font-weight: 400;
+    animation: blink 1s infinite;
+    color: inherit;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Typing container - ensure it doesn't collapse when empty */
+#typing-container {
+    display: inline-block;
+    min-width: 10px;
+}
+
+/* Modal scroll styles */
+#modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#modal-content::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+#modal-content::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+/* Ensure modal doesn't exceed screen height */
+#event-modal > div {
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Prevent content from overflowing and ensure it scrolls */
+#modal-content {
+    overflow-y: auto;
+    max-height: calc(90vh - 140px); /* Adjust based on header and footer height */
+}
+
+.gallery-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
