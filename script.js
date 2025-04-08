@@ -545,3 +545,55 @@ const swiper = new Swiper(".swiper", {
 			});
 		});
 	});
+
+  document.addEventListener("DOMContentLoaded", function () {
+		// Previous code for search and filter...
+
+		// For loading more events functionality
+		const eventsPerLoad = 3; // Number of events to load each time
+		let visibleEvents = eventsPerLoad; // Initially show the first 3 events
+		const eventCards = document.querySelectorAll(".event-card");
+		const loadMoreBtn = document.getElementById("loadMoreEvents");
+
+		// Hide events beyond the initial count
+		function initializeEvents() {
+			eventCards.forEach((card, index) => {
+				if (index >= visibleEvents) {
+					card.style.display = "none";
+				}
+			});
+
+			// Hide the "Load More" button if there are no more events to show
+			if (visibleEvents >= eventCards.length) {
+				loadMoreBtn.style.display = "none";
+			}
+		}
+
+		// Load more events when the button is clicked
+		loadMoreBtn.addEventListener("click", function () {
+			// Calculate the next batch of events to show
+			const nextBatch = Math.min(
+				visibleEvents + eventsPerLoad,
+				eventCards.length
+			);
+
+			// Show the next batch of events
+			for (let i = visibleEvents; i < nextBatch; i++) {
+				eventCards[i].style.display = "block";
+
+				// Add a fade-in animation for each new event
+				eventCards[i].classList.add("fade-in");
+			}
+
+			// Update the counter
+			visibleEvents = nextBatch;
+
+			// Hide the button if we've shown all events
+			if (visibleEvents >= eventCards.length) {
+				loadMoreBtn.style.display = "none";
+			}
+		});
+
+		// Initialize the events on page load
+		initializeEvents();
+	});
