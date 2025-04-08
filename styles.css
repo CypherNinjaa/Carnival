@@ -263,3 +263,147 @@ body {
 	}
 }
 
+/* Sponsors Section Styles */
+.sponsors-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsors-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sponsors-section .section-description {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #666;
+  text-align: center;
+}
+
+.sponsors-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0;
+}
+
+.sponsors-marquee-container::before,
+.sponsors-marquee-container::after {
+  content: "";
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sponsors-marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(248, 249, 250, 1) 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+.sponsors-marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(248, 249, 250, 1) 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+.sponsors-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sponsors-track {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+
+.sponsor-item {
+  flex-shrink: 0;
+  width: 200px;
+  margin: 0 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-item:hover {
+  transform: scale(1.05);
+}
+
+.sponsor-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-item img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sponsor-item p {
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.sponsors-marquee-container:hover .sponsors-track {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sponsor-item {
+    width: 150px;
+    margin: 0 20px;
+  }
+  
+  .sponsor-item img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .sponsors-section .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-item {
+    width: 120px;
+    margin: 0 15px;
+  }
+  
+  .sponsor-item img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+  
+  .sponsors-section .section-title {
+    font-size: 1.8rem;
+  }
+}
