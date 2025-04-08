@@ -484,3 +484,64 @@ const swiper = new Swiper(".swiper", {
       "0"
     );
   }, 1000);
+
+  // search function codes
+  document.addEventListener("DOMContentLoaded", function () {
+		// Get elements
+		const searchInput = document.getElementById("searchInput");
+		const filterButtons = document.querySelectorAll(".filter-btn");
+		const eventCards = document.querySelectorAll(".event-card"); // Assuming your events have this class
+
+		// Active filter
+		let activeFilter = "all";
+
+		// Real-time search functionality - triggers as user types
+		searchInput.addEventListener("input", function () {
+			performSearch();
+		});
+
+		function performSearch() {
+			const searchTerm = searchInput.value.toLowerCase().trim();
+
+			eventCards.forEach((card) => {
+				// Check if the card matches the current date filter
+				const matchesDateFilter =
+					activeFilter === "all" ||
+					card.getAttribute("data-date") === activeFilter;
+
+				// Check if the card matches the search term
+				const eventTitle = card.querySelector("h3").textContent.toLowerCase();
+				const eventDescription = card
+					.querySelector("p")
+					.textContent.toLowerCase();
+				const matchesSearch =
+					searchTerm === "" ||
+					eventTitle.includes(searchTerm) ||
+					eventDescription.includes(searchTerm);
+
+				// Show the card only if it matches both the filter and the search
+				if (matchesDateFilter && matchesSearch) {
+					card.style.display = "block";
+				} else {
+					card.style.display = "none";
+				}
+			});
+		}
+
+		// Filter functionality
+		filterButtons.forEach((button) => {
+			button.addEventListener("click", function () {
+				// Remove active class from all buttons
+				filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+				// Add active class to clicked button
+				this.classList.add("active");
+
+				// Update active filter
+				activeFilter = this.getAttribute("data-filter");
+
+				// Re-run search to apply both filter and current search term
+				performSearch();
+			});
+		});
+	});

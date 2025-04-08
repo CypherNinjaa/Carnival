@@ -1,157 +1,264 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 .hero-gradient {
-    background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(255, 193, 7, 0.1) 100%);
+	background: linear-gradient(
+		135deg,
+		rgba(0, 200, 83, 0.1) 0%,
+		rgba(255, 193, 7, 0.1) 100%
+	);
 }
 
 .nav-link {
-    position: relative;
+	position: relative;
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #00C853;
-    transition: width 0.3s ease;
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -4px;
+	left: 0;
+	background-color: #00c853;
+	transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-    width: 100%;
+	width: 100%;
 }
 
 .button-hover {
-    transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
 }
 
 .button-hover:hover {
-    transform: translateY(-2px);
+	transform: translateY(-2px);
 }
 
 .event-card {
-    transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .event-card:hover {
-    transform: translateY(-8px);
+	transform: translateY(-8px);
 }
 
 .event-card-overlay {
-    transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
 }
 
 .event-card:hover .event-card-overlay {
-    opacity: 1;
+	opacity: 1;
 }
 
 /* Modal animation */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes slideIn {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+	from {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 #event-modal {
-    animation: fadeIn 0.3s ease-out;
+	animation: fadeIn 0.3s ease-out;
 }
 
 #event-modal > div {
-    animation: slideIn 0.3s ease-out;
+	animation: slideIn 0.3s ease-out;
 }
 
 /* Event info button hover effect */
-.info-btn, .register-btn {
-    transition: all 0.3s ease;
+.info-btn,
+.register-btn {
+	transition: all 0.3s ease;
 }
 
-.info-btn:hover, .register-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.info-btn:hover,
+.register-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Typing effect cursor */
 #cursor {
-    font-weight: 400;
-    animation: blink 1s infinite;
-    color: inherit;
+	font-weight: 400;
+	animation: blink 1s infinite;
+	color: inherit;
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
 }
 
 /* Typing container - ensure it doesn't collapse when empty */
 #typing-container {
-    display: inline-block;
-    min-width: 10px;
+	display: inline-block;
+	min-width: 10px;
 }
 
 /* Modal scroll styles */
 #modal-content::-webkit-scrollbar {
-    width: 8px;
+	width: 8px;
 }
 
 #modal-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
+	background: #f1f1f1;
+	border-radius: 4px;
 }
 
 #modal-content::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 4px;
+	background: #ddd;
+	border-radius: 4px;
 }
 
 #modal-content::-webkit-scrollbar-thumb:hover {
-    background: #ccc;
+	background: #ccc;
 }
 
 /* Ensure modal doesn't exceed screen height */
 #event-modal > div {
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
+	max-height: 90vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Prevent content from overflowing and ensure it scrolls */
 #modal-content {
-    overflow-y: auto;
-    max-height: calc(90vh - 140px); /* Adjust based on header and footer height */
+	overflow-y: auto;
+	max-height: calc(90vh - 140px); /* Adjust based on header and footer height */
 }
 
 .gallery-section {
-  padding: 40px 20px;
-  background: #f9f9f9;
-  text-align: center;
+	padding: 40px 20px;
+	background: #f9f9f9;
+	text-align: center;
 }
 
 .gallery-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: #333;
 }
 
 .swiper {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  border-radius: 10px;
-  overflow: hidden;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
+	width: 100%;
+	height: auto;
+	display: block;
 }
 
+/* Search bar styling */
+.search-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin: 20px auto;
+	max-width: 600px;
+	padding: 0 15px;
+}
 
+.search-container input {
+	padding: 10px 15px 10px 40px;
+	border: 1px solid #ddd;
+	border-radius: 30px;
+	width: 100%;
+	font-size: 16px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s;
+}
+
+.search-container input:focus {
+	outline: none;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+	border-color: #ff6b6b;
+}
+
+.search-icon {
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #aaa;
+	font-size: 18px;
+}
+
+/* Filter bar styling */
+.filter-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 20px auto;
+	max-width: 800px;
+	padding: 0 15px;
+}
+
+.filter-btn {
+	padding: 8px 15px;
+	background: #f8f9fa;
+	border: 1px solid #dee2e6;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: all 0.3s;
+	white-space: nowrap;
+	flex: 0 1 auto; /* Don't grow, but allow shrinking */
+}
+
+.filter-btn:hover {
+	background: #e9ecef;
+}
+.filter-btn.active {
+	background: #4ade80; /* Green color for active filter */
+	color: white;
+	border-color: #4ade80;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+	.filter-container {
+		flex-wrap: nowrap; /* Prevent wrapping on very small screens */
+		overflow-x: auto; /* Allow horizontal scrolling if needed */
+		justify-content: flex-start;
+		padding-bottom: 5px; /* Add space for potential scrollbar */
+		-webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+		scrollbar-width: none; /* Hide scrollbar on Firefox */
+	}
+
+	.filter-container::-webkit-scrollbar {
+		display: none; /* Hide scrollbar on Chrome/Safari */
+	}
+
+	.filter-btn {
+		font-size: 13px;
+		padding: 6px 12px;
+	}
+}
