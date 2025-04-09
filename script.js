@@ -546,4 +546,49 @@ const swiper = new Swiper(".swiper", {
 		});
 	});
 
-  
+  // Cookie utility functions
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const cookieName = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+    for(let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i].trim();
+        if (cookie.indexOf(cookieName) === 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+    return "";
+}
+
+function deleteCookie(name) {
+    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+// Use cookies to improve user experience
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if this is a returning visitor
+    const visited = getCookie("visited");
+    
+    if (visited) {
+        console.log("Welcome back!");
+        // Site loads faster for returning visitors due to service worker caching
+    } else {
+        console.log("First time visitor detected");
+        setCookie("visited", "true", 30); // Set cookie for 30 days
+    }
+    
+    // Save event views in cookies
+    document.querySelectorAll(".info-btn").forEach(button => {
+        button.addEventListener("click", function() {
+            const eventType = this.getAttribute("data-event");
+            setCookie("viewed_event_" + eventType, "true", 30);
+        });
+    });
+});
