@@ -1,13 +1,13 @@
 // Tailwind configuration
 tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                primary: "#00C853",
-                secondary: "#FFC107",
-            },
-        },
-    },
+	theme: {
+		extend: {
+			colors: {
+				primary: "#00C853",
+				secondary: "#FFC107",
+			},
+		},
+	},
 };
 
 // Event information for popup
@@ -46,7 +46,7 @@ const eventInfo = {
             <ul class="list-disc pl-5 mt-2 space-y-1">
                 <li>Performances must have a particular theme related to our rich culture.</li>
                 <li>Participants can choose any global dance form (Indian or Western) such as Kathak, Salsa, Jazz, Kathakali, Bharat Natyam, Manipuri, Kuchipudi, Mohiniyattam, Odissi, Sattriya, Hip-Hop, etc.</li>
-                                <li>Solo or group performances are allowed. Group performances must have between 2 to 5 participants.</li>
+                <li>Solo or group performances are allowed. Group performances must have between 2 to 5 participants.</li>
                 <li>Time limit: 3-5 minutes. Exceeding the time limit will result in negative points.</li>
                 <li>Performances should authentically and respectfully showcase cultural traditions and heritage.</li>
                 <li>Appropriate attire must be worn to ensure respect for cultural sentiments and norms.</li>
@@ -104,7 +104,7 @@ const eventInfo = {
             <li>No wet mediums (e.g., watercolors, acrylics) or digital artwork allowed</li>
             <li>All artwork must be original — no plagiarism</li>
             <li>No mobile phone usage during the competition</li>
-            <li>The jury’s decision will be final</li>
+            <li>The jury's decision will be final</li>
         </ul>
 
         <h4 class="font-bold mt-4">Topics for Seniors (Offline & Online):</h4>
@@ -137,7 +137,7 @@ const eventInfo = {
             <li>Choose a topic from the list above</li>
             <li>Comic strips must include dialogue or sentences as part of the drawing</li>
             <li>Identity card submission is mandatory</li>
-            <li>Each submission must be in PDF format, named as per participant’s ID</li>
+            <li>Each submission must be in PDF format, named as per participant's ID</li>
             <li>Late submissions will not be accepted</li>
             <li>Deadline: April 21st, 2024</li>
             <li>Submit to: <a href="mailto:DrawmicsAIESR@gmail.com" class="text-blue-500 underline">DrawmicsAIESR@gmail.com</a></li>
@@ -159,7 +159,7 @@ const eventInfo = {
             <li>Online results will be announced by April 27th, 2024 on our website and social media</li>
             <li>Participants must carry a valid institutional ID card</li>
             <li>Refreshments will be provided</li>
-            <li>Cafeteria access is available (participants may bring money)</li>
+            <li>The cafeteria will be open (participants may bring money)</li>
             <li>For queries, contact: 8340109368 or 917209746518</li>
         </ul>
     `,
@@ -195,7 +195,7 @@ const eventInfo = {
             <li>Quiz conducted in English only</li>
             <li>Quiz master's rules during the event are final and will be disclosed on the spot</li>
             <li>Use of mobile phones during the quiz is prohibited</li>
-            <li>The jury’s decision is final</li>
+            <li>The jury's decision is final</li>
             <li>Failure to follow rules may result in disqualification</li>
         </ul>
 
@@ -215,7 +215,7 @@ const eventInfo = {
             <li>Bring a valid institutional ID card</li>
             <li>Refreshments will be provided</li>
             <li>The cafeteria will be open (participants may bring money)</li>
-            <li>Online payments are at participants’ own risk — contact us for clarifications</li>
+            <li>Online payments are at participants' own risk — contact us for clarifications</li>
             <li>For queries, contact: 8340109368 or 917209746518</li>
         </ul>
     `,
@@ -225,57 +225,57 @@ const eventInfo = {
 
 // Typing effect function
 function setupTypingEffect() {
-    const phrases = [
-        "Read → Reflect → Revolutionize",
-        "Write → Perform → Transform",
-        "Think → Speak → Influence",
-        "Learn → Express → Lead",
-        "Dream → Create → Resonate",
-    ];
-    
-    const typedTextElement = document.getElementById('typed-text');
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100; // Base typing speed in milliseconds
-    
-    function typeText() {
-        const currentPhrase = phrases[phraseIndex];
-        
-        if (isDeleting) {
-            // Deleting text
-            typedTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = 50; // Faster when deleting
-        } else {
-            // Typing text
-            typedTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 100; // Normal speed when typing
-        }
-        
-        // If finished typing the phrase
-        if (!isDeleting && charIndex === currentPhrase.length) {
-            // Pause at the end of typing
-            isDeleting = true;
-            typingSpeed = 1500; // Wait before starting to delete
-        } 
-        // If finished deleting the phrase
-        else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            
-            // Move to next phrase
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            
-            // Pause before typing next phrase
-            typingSpeed = 500;
-        }
-        
-        setTimeout(typeText, typingSpeed);
-    }
-    
-    // Start the typing effect
-    setTimeout(typeText, 1000);
+	const phrases = [
+		"Read → Reflect → Revolutionize",
+		"Write → Perform → Transform",
+		"Think → Speak → Influence",
+		"Learn → Express → Lead",
+		"Dream → Create → Resonate",
+	];
+
+	const typedTextElement = document.getElementById("typed-text");
+	let phraseIndex = 0;
+	let charIndex = 0;
+	let isDeleting = false;
+	let typingSpeed = 100; // Base typing speed in milliseconds
+
+	function typeText() {
+		const currentPhrase = phrases[phraseIndex];
+
+		if (isDeleting) {
+			// Deleting text
+			typedTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
+			charIndex--;
+			typingSpeed = 50; // Faster when deleting
+		} else {
+			// Typing text
+			typedTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
+			charIndex++;
+			typingSpeed = 100; // Normal speed when typing
+		}
+
+		// If finished typing the phrase
+		if (!isDeleting && charIndex === currentPhrase.length) {
+			// Pause at the end of typing
+			isDeleting = true;
+			typingSpeed = 1500; // Wait before starting to delete
+		}
+		// If finished deleting the phrase
+		else if (isDeleting && charIndex === 0) {
+			isDeleting = false;
+
+			// Move to next phrase
+			phraseIndex = (phraseIndex + 1) % phrases.length;
+
+			// Pause before typing next phrase
+			typingSpeed = 500;
+		}
+
+		setTimeout(typeText, typingSpeed);
+	}
+
+	// Start the typing effect
+	setTimeout(typeText, 1000);
 }
 
 // Main document ready function - combines all event handlers
@@ -392,398 +392,261 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-const swiper = new Swiper(".swiper", {
-	loop: true,
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	speed: 800,
-});
+// Initialize favorites from localStorage
+document.addEventListener("DOMContentLoaded", function () {
+	let favorites = JSON.parse(localStorage.getItem("eventFavorites")) || [];
 
+	// Check if the user has seen the favorites feature before
+	if (!localStorage.getItem("favoritesFeatureSeen")) {
+		// Find the favorites filter button
+		const favBtn = document.querySelector(
+			'.filter-btn[data-filter="favorites"]'
+		);
+		if (favBtn) {
+			// Add the pulse animation class
+			favBtn.classList.add("new-feature-pulse");
 
-// form validator
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const nameInput = form.querySelector("input[type='text']");
-    const emailInput = form.querySelector("input[type='email']");
-    const subjectInput = form.querySelector("input[placeholder='Subject']");
-    const messageInput = form.querySelector("textarea");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Stop form from submitting by default
-
-      let isValid = true;
-      let errorMessage = "";
-
-      // Name validation
-      if (nameInput.value.trim() === "") {
-        isValid = false;
-        errorMessage += "⚠️ Name is required.\n";
-      }
-
-      // Email validation
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(emailInput.value.trim())) {
-        isValid = false;
-        errorMessage += "⚠️ Please enter a valid email.\n";
-      }
-
-      // Subject validation
-      if (subjectInput.value.trim() === "") {
-        isValid = false;
-        errorMessage += "⚠️ Subject cannot be empty.\n";
-      }
-
-      // Message validation
-      if (messageInput.value.trim().length < 10) {
-        isValid = false;
-        errorMessage += "⚠️ Message should be at least 10 characters.\n";
-      }
-
-      // Show result
-      if (!isValid) {
-        alert(errorMessage);
-      } else {
-        alert("✅ Form submitted successfully!");
-        form.reset(); // Clear the form
-      }
-    });
-  });
-
-// <!-- Countdown Script -->
-
-  const eventDate = new Date("2025-04-25T00:00:00").getTime();
-
-  const timer = setInterval(function () {
-    const now = new Date().getTime();
-    const timeLeft = eventDate - now;
-
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      document.getElementById("countdown").innerHTML =
-        "<p class='text-xl font-bold text-green-300'>🎉 The Event Has Started!</p>";
-      return;
-    }
-
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerText = String(days).padStart(2, "0");
-    document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-    document.getElementById("minutes").innerText = String(minutes).padStart(
-      2,
-      "0"
-    );
-    document.getElementById("seconds").innerText = String(seconds).padStart(
-      2,
-      "0"
-    );
-  }, 1000);
-
-  // search function codes
-  document.addEventListener("DOMContentLoaded", function () {
-		// Get elements
-		const searchInput = document.getElementById("searchInput");
-		const filterButtons = document.querySelectorAll(".filter-btn");
-		const eventCards = document.querySelectorAll(".event-card"); // Assuming your events have this class
-
-		// Active filter
-		let activeFilter = "all";
-
-		// Real-time search functionality - triggers as user types
-		searchInput.addEventListener("input", function () {
-			performSearch();
-		});
-
-		function performSearch() {
-			const searchTerm = searchInput.value.toLowerCase().trim();
-
-			eventCards.forEach((card) => {
-				// Check if the card matches the current date filter
-				const matchesDateFilter =
-					activeFilter === "all" ||
-					card.getAttribute("data-date") === activeFilter;
-
-				// Check if the card matches the search term
-				const eventTitle = card.querySelector("h3").textContent.toLowerCase();
-				const eventDescription = card
-					.querySelector("p")
-					.textContent.toLowerCase();
-				const matchesSearch =
-					searchTerm === "" ||
-					eventTitle.includes(searchTerm) ||
-					eventDescription.includes(searchTerm);
-
-				// Show the card only if it matches both the filter and the search
-				if (matchesDateFilter && matchesSearch) {
-					card.style.display = "block";
-				} else {
-					card.style.display = "none";
-				}
+			// Remove pulse effect after the user clicks the button
+			favBtn.addEventListener("click", function () {
+				this.classList.remove("new-feature-pulse");
+				// Save to localStorage so we don't show the pulse again
+				localStorage.setItem("favoritesFeatureSeen", "true");
 			});
 		}
+	}
 
-		// Filter functionality
-		filterButtons.forEach((button) => {
-			button.addEventListener("click", function () {
-				// Remove active class from all buttons
-				filterButtons.forEach((btn) => btn.classList.remove("active"));
+	// Get elements once
+	const searchInput = document.getElementById("searchInput");
+	const filterButtons = document.querySelectorAll(".filter-btn");
+	const eventCards = document.querySelectorAll(".event-card");
 
-				// Add active class to clicked button
-				this.classList.add("active");
+	// Track active filter
+	let activeFilter = "all";
 
-				// Update active filter
-				activeFilter = this.getAttribute("data-filter");
+	// Update heart icons based on saved favorites
+	function updateFavoriteButtons() {
+		document.querySelectorAll(".favorite-btn").forEach((btn) => {
+			const eventType = btn.getAttribute("data-event");
+			if (favorites.includes(eventType)) {
+				btn.innerHTML = '<i class="fas fa-heart"></i>';
+				btn.classList.remove("bg-gray-200", "text-gray-700");
+				btn.classList.add("bg-red-100", "text-red-500");
+			} else {
+				btn.innerHTML = '<i class="far fa-heart"></i>';
+				btn.classList.remove("bg-red-100", "text-red-500");
+				btn.classList.add("bg-gray-200", "text-gray-700");
+			}
+		});
 
-				// Re-run search to apply both filter and current search term
-				performSearch();
-			});
+		// Update favorites filter button indicator
+		const favoritesFilterBtn = document.querySelector(
+			'.filter-btn[data-filter="favorites"]'
+		);
+		if (favoritesFilterBtn) {
+			if (favorites.length > 0) {
+				favoritesFilterBtn.classList.add("has-favorites");
+			} else {
+				favoritesFilterBtn.classList.remove("has-favorites");
+			}
+		}
+	}
+
+	// Toast notification system
+	function showToast(message) {
+		// Create toast if it doesn't exist
+		let toast = document.getElementById("toast-notification");
+		if (!toast) {
+			toast = document.createElement("div");
+			toast.id = "toast-notification";
+			toast.className =
+				"fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-opacity duration-300 opacity-0";
+			document.body.appendChild(toast);
+		}
+
+		// Show toast
+		toast.textContent = message;
+		toast.classList.remove("opacity-0");
+
+		// Hide after 3 seconds
+		setTimeout(() => {
+			toast.classList.add("opacity-0");
+		}, 3000);
+	}
+
+	// Toggle favorite status
+	function toggleFavorite(eventType) {
+		const index = favorites.indexOf(eventType);
+		if (index === -1) {
+			// Add to favorites
+			favorites.push(eventType);
+			showToast(`Added "${eventInfo[eventType].title}" to favorites!`);
+		} else {
+			// Remove from favorites
+			favorites.splice(index, 1);
+			showToast(`Removed "${eventInfo[eventType].title}" from favorites!`);
+		}
+
+		// Save to localStorage
+		localStorage.setItem("eventFavorites", JSON.stringify(favorites));
+		updateFavoriteButtons();
+
+		// Re-run search/filter to update the view
+		performSearch();
+	}
+
+	// Unified search and filter function
+	function performSearch() {
+		const searchTerm = searchInput.value.toLowerCase().trim();
+
+		eventCards.forEach((card) => {
+			// Get the event type from the info button
+			const eventType = card
+				.querySelector(".info-btn")
+				.getAttribute("data-event");
+
+			// Check if the card matches the current filter
+			let matchesFilter = false;
+
+			if (activeFilter === "all") {
+				matchesFilter = true;
+			} else if (activeFilter === "favorites") {
+				matchesFilter = favorites.includes(eventType);
+			} else {
+				matchesFilter = card.getAttribute("data-date") === activeFilter;
+			}
+
+			// Check if the card matches the search term
+			const eventTitle = card.querySelector("h3").textContent.toLowerCase();
+			const eventDescription = card
+				.querySelector("p")
+				.textContent.toLowerCase();
+			const matchesSearch =
+				searchTerm === "" ||
+				eventTitle.includes(searchTerm) ||
+				eventDescription.includes(searchTerm);
+
+			// Show the card only if it matches both the filter and the search
+			if (matchesFilter && matchesSearch) {
+				card.style.display = "block";
+			} else {
+				card.style.display = "none";
+			}
+		});
+
+		// Check if any cards are visible
+		updateNoResultsMessage();
+	}
+
+	// Update UI to indicate if no events match the current filter/search
+	function updateNoResultsMessage() {
+		const visibleCards = Array.from(eventCards).filter(
+			(card) => card.style.display !== "none"
+		);
+
+		// Get the events section
+		const eventsSection = document.getElementById("events");
+		let noResultsMsg = document.getElementById("no-results-message");
+
+		if (visibleCards.length === 0) {
+			// Create a message if there are no visible cards
+			if (!noResultsMsg) {
+				noResultsMsg = document.createElement("p");
+				noResultsMsg.id = "no-results-message";
+				noResultsMsg.className =
+					"text-center text-gray-500 my-8 p-4 bg-gray-50 rounded-lg max-w-md mx-auto";
+
+				// Find where to insert the message (after the grid div)
+				const eventsGrid = eventsSection.querySelector(".grid");
+				if (eventsGrid) {
+					eventsGrid.parentNode.insertBefore(
+						noResultsMsg,
+						eventsGrid.nextSibling
+					);
+				} else {
+					eventsSection.appendChild(noResultsMsg);
+				}
+			}
+
+			if (activeFilter === "favorites") {
+				noResultsMsg.textContent =
+					"You haven't added any events to your favorites yet.";
+			} else if (searchTerm !== "") {
+				noResultsMsg.textContent = "No events match your search.";
+			} else {
+				noResultsMsg.textContent = "No events available for this filter.";
+			}
+
+			noResultsMsg.style.display = "block";
+		} else if (noResultsMsg) {
+			noResultsMsg.style.display = "none";
+		}
+	}
+
+	// Set up event listeners for favorite buttons
+	document.querySelectorAll(".favorite-btn").forEach((btn) => {
+		const eventType = btn.getAttribute("data-event");
+		btn.addEventListener("click", function (e) {
+			e.stopPropagation(); // Prevent event bubbling
+			toggleFavorite(eventType);
 		});
 	});
 
-  // Cookie utility functions
-function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
+	// Set up event listeners for filter buttons
+	filterButtons.forEach((button) => {
+		button.addEventListener("click", function () {
+			// Remove active class from all buttons
+			filterButtons.forEach((btn) => btn.classList.remove("active"));
 
-function getCookie(name) {
-    const cookieName = name + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
-    for(let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i].trim();
-        if (cookie.indexOf(cookieName) === 0) {
-            return cookie.substring(cookieName.length, cookie.length);
-        }
-    }
-    return "";
-}
+			// Add active class to clicked button
+			this.classList.add("active");
 
-function deleteCookie(name) {
-    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-}
+			// Update active filter
+			activeFilter = this.getAttribute("data-filter");
 
-// Use cookies to improve user experience
-document.addEventListener("DOMContentLoaded", function() {
-    // Check if this is a returning visitor
-    const visited = getCookie("visited");
-    
-    if (visited) {
-        console.log("Welcome back!");
-        // Site loads faster for returning visitors due to service worker caching
-    } else {
-        console.log("First time visitor detected");
-        setCookie("visited", "true", 30); // Set cookie for 30 days
-    }
-    
-    // Save event views in cookies
-    document.querySelectorAll(".info-btn").forEach(button => {
-        button.addEventListener("click", function() {
-            const eventType = this.getAttribute("data-event");
-            setCookie("viewed_event_" + eventType, "true", 30);
-        });
-    });
+			// Apply filtering
+			performSearch();
+		});
+	});
+
+	// Set up event listener for search input
+	if (searchInput) {
+		searchInput.addEventListener("input", performSearch);
+	}
+
+	// Initialize on page load
+	updateFavoriteButtons();
+	performSearch();
 });
-// Favorites/Wishlist functionality
-document.addEventListener("DOMContentLoaded", function() {
-  // Initialize favorites from localStorage
-  let favorites = JSON.parse(localStorage.getItem('eventFavorites')) || [];
-  
-  // Get elements once
-  const searchInput = document.getElementById("searchInput");
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const eventCards = document.querySelectorAll(".event-card");
-  
-  // Track active filter
-  let activeFilter = "all";
-  
-  // Update heart icons based on saved favorites
-  function updateFavoriteButtons() {
-    document.querySelectorAll('.favorite-btn').forEach(btn => {
-      const eventType = btn.getAttribute('data-event');
-      if (favorites.includes(eventType)) {
-        btn.innerHTML = '<i class="fas fa-heart"></i>';
-        btn.classList.remove('bg-gray-200', 'text-gray-700');
-        btn.classList.add('bg-red-100', 'text-red-500');
-      } else {
-        btn.innerHTML = '<i class="far fa-heart"></i>';
-        btn.classList.remove('bg-red-100', 'text-red-500');
-        btn.classList.add('bg-gray-200', 'text-gray-700');
-      }
-    });
-    
-    // Update favorites filter button indicator
-    const favoritesFilterBtn = document.querySelector('.filter-btn[data-filter="favorites"]');
-    if (favoritesFilterBtn) {
-      if (favorites.length > 0) {
-        favoritesFilterBtn.classList.add('has-favorites');
-      } else {
-        favoritesFilterBtn.classList.remove('has-favorites');
-      }
-    }
-  }
-  
-  // Toast notification system
-  function showToast(message) {
-    // Create toast if it doesn't exist
-    let toast = document.getElementById('toast-notification');
-    if (!toast) {
-      toast = document.createElement('div');
-      toast.id = 'toast-notification';
-      toast.className = 'fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-opacity duration-300 opacity-0';
-      document.body.appendChild(toast);
-    }
-    
-    // Show toast
-    toast.textContent = message;
-    toast.classList.remove('opacity-0');
-    
-    // Hide after 3 seconds
-    setTimeout(() => {
-      toast.classList.add('opacity-0');
-    }, 3000);
-  }
-  
-  // Toggle favorite status
-  function toggleFavorite(eventType) {
-    const index = favorites.indexOf(eventType);
-    if (index === -1) {
-      // Add to favorites
-      favorites.push(eventType);
-      showToast(`Added "${eventInfo[eventType].title}" to favorites!`);
-    } else {
-      // Remove from favorites
-      favorites.splice(index, 1);
-      showToast(`Removed "${eventInfo[eventType].title}" from favorites!`);
-    }
-    
-    // Save to localStorage
-    localStorage.setItem('eventFavorites', JSON.stringify(favorites));
-    updateFavoriteButtons();
-    
-    // Re-run search/filter to update the view
-    performSearch();
-  }
-  
-  // Unified search and filter function
-  function performSearch() {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    
-    eventCards.forEach((card) => {
-      // Get the event type from the info button
-      const eventType = card.querySelector('.info-btn').getAttribute('data-event');
-      
-      // Check if the card matches the current filter
-      let matchesFilter = false;
-      
-      if (activeFilter === "all") {
-        matchesFilter = true;
-      } else if (activeFilter === "favorites") {
-        matchesFilter = favorites.includes(eventType);
-      } else {
-        matchesFilter = card.getAttribute("data-date") === activeFilter;
-      }
-      
-      // Check if the card matches the search term
-      const eventTitle = card.querySelector("h3").textContent.toLowerCase();
-      const eventDescription = card.querySelector("p").textContent.toLowerCase();
-      const matchesSearch =
-        searchTerm === "" ||
-        eventTitle.includes(searchTerm) ||
-        eventDescription.includes(searchTerm);
-      
-      // Show the card only if it matches both the filter and the search
-      if (matchesFilter && matchesSearch) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-    
-    // Check if any cards are visible
-    updateNoResultsMessage();
-  }
-  
-  // Update UI to indicate if no events match the current filter/search
-  function updateNoResultsMessage() {
-    const visibleCards = Array.from(eventCards).filter(card => 
-      card.style.display !== "none"
-    );
-    
-    // Get the events section
-    const eventsSection = document.getElementById("events");
-    let noResultsMsg = document.getElementById("no-results-message");
-    
-    if (visibleCards.length === 0) {
-      // Create a message if there are no visible cards
-      if (!noResultsMsg) {
-        noResultsMsg = document.createElement("p");
-        noResultsMsg.id = "no-results-message";
-        noResultsMsg.className = "text-center text-gray-500 my-8 p-4 bg-gray-50 rounded-lg max-w-md mx-auto";
-        
-        // Find where to insert the message (after the grid div)
-        const eventsGrid = eventsSection.querySelector('.grid');
-        if (eventsGrid) {
-          eventsGrid.parentNode.insertBefore(noResultsMsg, eventsGrid.nextSibling);
-        } else {
-          eventsSection.appendChild(noResultsMsg);
-        }
-      }
-      
-      if (activeFilter === "favorites") {
-        noResultsMsg.textContent = "You haven't added any events to your favorites yet.";
-      } else if (searchTerm !== "") {
-        noResultsMsg.textContent = "No events match your search.";
-      } else {
-        noResultsMsg.textContent = "No events available for this filter.";
-      }
-      
-      noResultsMsg.style.display = "block";
-    } else if (noResultsMsg) {
-      noResultsMsg.style.display = "none";
-    }
-  }
-  
-  // Set up event listeners for favorite buttons
-  document.querySelectorAll('.favorite-btn').forEach(btn => {
-    const eventType = btn.getAttribute('data-event');
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation(); // Prevent event bubbling
-      toggleFavorite(eventType);
-    });
-  });
-  
-  // Set up event listeners for filter buttons
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", function() {
-      // Remove active class from all buttons
-      filterButtons.forEach((btn) => btn.classList.remove("active"));
-      
-      // Add active class to clicked button
-      this.classList.add("active");
-      
-      // Update active filter
-      activeFilter = this.getAttribute("data-filter");
-      
-      // Apply filtering
-      performSearch();
-    });
-  });
-  
-  // Set up event listener for search input
-  if (searchInput) {
-    searchInput.addEventListener("input", performSearch);
-  }
-  
-  // Initialize on page load
-  updateFavoriteButtons();
-  performSearch();
-});
+
+// Countdown Script
+const eventDate = new Date("2025-04-25T00:00:00").getTime();
+
+const timer = setInterval(function () {
+	const now = new Date().getTime();
+	const timeLeft = eventDate - now;
+
+	if (timeLeft <= 0) {
+		clearInterval(timer);
+		document.getElementById("countdown").innerHTML =
+			"<p class='text-xl font-bold text-green-300'>🎉 The Event Has Started!</p>";
+		return;
+	}
+
+	const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+	const hours = Math.floor(
+		(timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+	);
+	const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+	document.getElementById("days").innerText = String(days).padStart(2, "0");
+	document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+	document.getElementById("minutes").innerText = String(minutes).padStart(
+		2,
+		"0"
+	);
+	document.getElementById("seconds").innerText = String(seconds).padStart(
+		2,
+		"0"
+	);
+}, 1000);
