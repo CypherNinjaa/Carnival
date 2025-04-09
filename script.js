@@ -592,3 +592,198 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+// Favorites/Wishlist functionality
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize favorites from localStorage
+  let favorites = JSON.parse(localStorage.getItem('eventFavorites')) || [];
+  
+  // Get elements once
+  const searchInput = document.getElementById("searchInput");
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const eventCards = document.querySelectorAll(".event-card");
+  
+  // Track active filter
+  let activeFilter = "all";
+  
+  // Update heart icons based on saved favorites
+  function updateFavoriteButtons() {
+    document.querySelectorAll('.favorite-btn').forEach(btn => {
+      const eventType = btn.getAttribute('data-event');
+      if (favorites.includes(eventType)) {
+        btn.innerHTML = '<i class="fas fa-heart"></i>';
+        btn.classList.remove('bg-gray-200', 'text-gray-700');
+        btn.classList.add('bg-red-100', 'text-red-500');
+      } else {
+        btn.innerHTML = '<i class="far fa-heart"></i>';
+        btn.classList.remove('bg-red-100', 'text-red-500');
+        btn.classList.add('bg-gray-200', 'text-gray-700');
+      }
+    });
+    
+    // Update favorites filter button indicator
+    const favoritesFilterBtn = document.querySelector('.filter-btn[data-filter="favorites"]');
+    if (favoritesFilterBtn) {
+      if (favorites.length > 0) {
+        favoritesFilterBtn.classList.add('has-favorites');
+      } else {
+        favoritesFilterBtn.classList.remove('has-favorites');
+      }
+    }
+  }
+  
+  // Toast notification system
+  function showToast(message) {
+    // Create toast if it doesn't exist
+    let toast = document.getElementById('toast-notification');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'toast-notification';
+      toast.className = 'fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-opacity duration-300 opacity-0';
+      document.body.appendChild(toast);
+    }
+    
+    // Show toast
+    toast.textContent = message;
+    toast.classList.remove('opacity-0');
+    
+    // Hide after 3 seconds
+    setTimeout(() => {
+      toast.classList.add('opacity-0');
+    }, 3000);
+  }
+  
+  // Toggle favorite status
+  function toggleFavorite(eventType) {
+    const index = favorites.indexOf(eventType);
+    if (index === -1) {
+      // Add to favorites
+      favorites.push(eventType);
+      showToast(`Added "${eventInfo[eventType].title}" to favorites!`);
+    } else {
+      // Remove from favorites
+      favorites.splice(index, 1);
+      showToast(`Removed "${eventInfo[eventType].title}" from favorites!`);
+    }
+    
+    // Save to localStorage
+    localStorage.setItem('eventFavorites', JSON.stringify(favorites));
+    updateFavoriteButtons();
+    
+    // Re-run search/filter to update the view
+    performSearch();
+  }
+  
+  // Unified search and filter function
+  function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+    eventCards.forEach((card) => {
+      // Get the event type from the info button
+      const eventType = card.querySelector('.info-btn').getAttribute('data-event');
+      
+      // Check if the card matches the current filter
+      let matchesFilter = false;
+      
+      if (activeFilter === "all") {
+        matchesFilter = true;
+      } else if (activeFilter === "favorites") {
+        matchesFilter = favorites.includes(eventType);
+      } else {
+        matchesFilter = card.getAttribute("data-date") === activeFilter;
+      }
+      
+      // Check if the card matches the search term
+      const eventTitle = card.querySelector("h3").textContent.toLowerCase();
+      const eventDescription = card.querySelector("p").textContent.toLowerCase();
+      const matchesSearch =
+        searchTerm === "" ||
+        eventTitle.includes(searchTerm) ||
+        eventDescription.includes(searchTerm);
+      
+      // Show the card only if it matches both the filter and the search
+      if (matchesFilter && matchesSearch) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+    
+    // Check if any cards are visible
+    updateNoResultsMessage();
+  }
+  
+  // Update UI to indicate if no events match the current filter/search
+  function updateNoResultsMessage() {
+    const visibleCards = Array.from(eventCards).filter(card => 
+      card.style.display !== "none"
+    );
+    
+    // Get the events section
+    const eventsSection = document.getElementById("events");
+    let noResultsMsg = document.getElementById("no-results-message");
+    
+    if (visibleCards.length === 0) {
+      // Create a message if there are no visible cards
+      if (!noResultsMsg) {
+        noResultsMsg = document.createElement("p");
+        noResultsMsg.id = "no-results-message";
+        noResultsMsg.className = "text-center text-gray-500 my-8 p-4 bg-gray-50 rounded-lg max-w-md mx-auto";
+        
+        // Find where to insert the message (after the grid div)
+        const eventsGrid = eventsSection.querySelector('.grid');
+        if (eventsGrid) {
+          eventsGrid.parentNode.insertBefore(noResultsMsg, eventsGrid.nextSibling);
+        } else {
+          eventsSection.appendChild(noResultsMsg);
+        }
+      }
+      
+      if (activeFilter === "favorites") {
+        noResultsMsg.textContent = "You haven't added any events to your favorites yet.";
+      } else if (searchTerm !== "") {
+        noResultsMsg.textContent = "No events match your search.";
+      } else {
+        noResultsMsg.textContent = "No events available for this filter.";
+      }
+      
+      noResultsMsg.style.display = "block";
+    } else if (noResultsMsg) {
+      noResultsMsg.style.display = "none";
+    }
+  }
+  
+  // Set up event listeners for favorite buttons
+  document.querySelectorAll('.favorite-btn').forEach(btn => {
+    const eventType = btn.getAttribute('data-event');
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent event bubbling
+      toggleFavorite(eventType);
+    });
+  });
+  
+  // Set up event listeners for filter buttons
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function() {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      
+      // Add active class to clicked button
+      this.classList.add("active");
+      
+      // Update active filter
+      activeFilter = this.getAttribute("data-filter");
+      
+      // Apply filtering
+      performSearch();
+    });
+  });
+  
+  // Set up event listener for search input
+  if (searchInput) {
+    searchInput.addEventListener("input", performSearch);
+  }
+  
+  // Initialize on page load
+  updateFavoriteButtons();
+  performSearch();
+});
