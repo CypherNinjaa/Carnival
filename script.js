@@ -658,3 +658,38 @@ const swiper = new Swiper(".swiper", {
 	},
 	speed: 800,
 });
+// Contact form handling
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            name: this.querySelector('input[name="name"]').value,
+            email: this.querySelector('input[name="email"]').value,
+            subject: this.querySelector('input[name="subject"]').value,
+            message: this.querySelector('textarea[name="message"]').value
+        };
+        
+        // Create success message element
+        const successMessage = document.createElement('div');
+        successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4';
+        successMessage.innerHTML = `
+            <strong class="font-bold">Thank you!</strong>
+            <span class="block sm:inline"> Your message has been sent successfully. We'll get back to you soon.</span>
+        `;
+        
+        // Clear form and show success message
+        this.reset();
+        this.parentNode.appendChild(successMessage);
+        
+        // Remove success message after 5 seconds
+        setTimeout(() => {
+            successMessage.remove();
+        }, 5000);
+        
+        // Log form data (for debugging)
+        console.log('Form submitted:', formData);
+    });
+}
