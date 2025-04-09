@@ -650,3 +650,11 @@ const timer = setInterval(function () {
 		"0"
 	);
 }, 1000);
+const swiper = new Swiper(".swiper", {
+	loop: true,
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	speed: 800,
+});
