@@ -14,6 +14,7 @@ const ASSETS_TO_CACHE = [
 	"assets/img1.jpg",
 	"assets/img2.jpg",
 	"assets/quizard.jpg",
+	"assets/bg.jpg",
 	// Add other assets you want to cache
 ];
 
