@@ -13,7 +13,7 @@ tailwind.config = {
 // Event information for popup
 const eventInfo = {
 	dance: {
-		title: "Dance & Frolic",
+		title: "Echoes of Lingo",
 		content: `
             <p class="mb-4">Hey there, dance enthusiasts! Get ready to groove and twirl at the exhilarating cultural dance competition—"Dance and Frolic"! Organized by Amity Institute of English Studies and Research as part of our three-day Literature Festival, Carnivalesque 3.0. Immerse yourself in a vibrant celebration of diverse cultures through the universal language of dance. Show off your moves, unleash your creativity, and captivate the audience with your rhythmic prowess. Join us for an experience filled with electrifying performances, friendly competition, and the chance to win exciting prizes. Don't miss out on this opportunity to shine on the dance floor! So, lace up your dancing shoes and let the "Dance and Frolic" extravaganza begin!</p>
 
