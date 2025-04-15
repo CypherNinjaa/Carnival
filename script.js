@@ -80,7 +80,6 @@ const eventInfo = {
                 <li>For any queries: 8340109368 and 7209746518.</li>
             </ul>
         `,
-		registrationUrl: "https://forms.google.com/danceandfrolic",
 	},
 	DrawMics: {
 		title: "DrawMics - Comic Strip Drawing Competition",
@@ -163,7 +162,6 @@ const eventInfo = {
             <li>For queries, contact: 8340109368 or 917209746518</li>
         </ul>
     `,
-		registrationUrl: "https://forms.google.com/drawmics",
 	},
 
 	Quizards: {
@@ -219,7 +217,22 @@ const eventInfo = {
             <li>For queries, contact: 8340109368 or 917209746518</li>
         </ul>
     `,
-		registrationUrl: "https://forms.google.com/quizards",
+	},
+	Quizzarad: {
+		title: "Quizzarad",
+		content: "<p>Quiz event details coming soon.</p>",
+	},
+	BattleofBooks: {
+		title: "Battle of Books",
+		content: "<p>Battle of Books event details coming soon.</p>",
+	},
+	ConCloset: {
+		title: "Con-Closet",
+		content: "<p>Con-Closet event details coming soon.</p>",
+	},
+	Dance: {
+		title: "Dance and frolics",
+		content: "<p>Dance and frolics event details coming soon.</p>",
 	},
 };
 
@@ -335,8 +348,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (event) {
 				modalTitle.textContent = event.title;
 				modalContent.innerHTML = event.content;
+				// Always open the official registration link
 				modalRegister.onclick = function () {
-					window.open(event.registrationUrl, "_blank");
+					window.open("https://www.amity.edu/nspg/CARNIVALESQUE2025", "_blank");
 				};
 
 				// Show modal
@@ -378,16 +392,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Handle register buttons in event cards
-	document.querySelectorAll(".register-btn").forEach((btn, index) => {
+	document.querySelectorAll(".register-btn").forEach((btn) => {
 		btn.addEventListener("click", function (e) {
 			e.preventDefault();
-
-			// Extract event type based on index
-			const eventTypes = Object.keys(eventInfo);
-			if (index < eventTypes.length) {
-				const eventType = eventTypes[index];
-				window.open(eventInfo[eventType].registrationUrl, "_blank");
-			}
+			window.open("https://www.amity.edu/nspg/CARNIVALESQUE2025", "_blank");
 		});
 	});
 });
@@ -479,11 +487,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (index === -1) {
 			// Add to favorites
 			favorites.push(eventType);
-			showToast(`Added "${eventInfo[eventType].title}" to favorites!`);
+			const title =
+				(eventInfo[eventType] && eventInfo[eventType].title) ||
+				eventType.replace(/([A-Z])/g, " $1").trim();
+			showToast(`Added "${title}" to favorites!`);
 		} else {
 			// Remove from favorites
 			favorites.splice(index, 1);
-			showToast(`Removed "${eventInfo[eventType].title}" from favorites!`);
+			const title =
+				(eventInfo[eventType] && eventInfo[eventType].title) ||
+				eventType.replace(/([A-Z])/g, " $1").trim();
+			showToast(`Removed "${title}" from favorites!`);
 		}
 
 		// Save to localStorage
@@ -659,37 +673,38 @@ const swiper = new Swiper(".swiper", {
 	speed: 800,
 });
 // Contact form handling
-const contactForm = document.getElementById('contactForm');
+const contactForm = document.getElementById("contactForm");
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = {
-            name: this.querySelector('input[name="name"]').value,
-            email: this.querySelector('input[name="email"]').value,
-            subject: this.querySelector('input[name="subject"]').value,
-            message: this.querySelector('textarea[name="message"]').value
-        };
-        
-        // Create success message element
-        const successMessage = document.createElement('div');
-        successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4';
-        successMessage.innerHTML = `
+	contactForm.addEventListener("submit", function (e) {
+		e.preventDefault();
+
+		// Get form data
+		const formData = {
+			name: this.querySelector('input[name="name"]').value,
+			email: this.querySelector('input[name="email"]').value,
+			subject: this.querySelector('input[name="subject"]').value,
+			message: this.querySelector('textarea[name="message"]').value,
+		};
+
+		// Create success message element
+		const successMessage = document.createElement("div");
+		successMessage.className =
+			"bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4";
+		successMessage.innerHTML = `
             <strong class="font-bold">Thank you!</strong>
             <span class="block sm:inline"> Your message has been sent successfully. We'll get back to you soon.</span>
         `;
-        
-        // Clear form and show success message
-        this.reset();
-        this.parentNode.appendChild(successMessage);
-        
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-            successMessage.remove();
-        }, 5000);
-        
-        // Log form data (for debugging)
-        console.log('Form submitted:', formData);
-    });
+
+		// Clear form and show success message
+		this.reset();
+		this.parentNode.appendChild(successMessage);
+
+		// Remove success message after 5 seconds
+		setTimeout(() => {
+			successMessage.remove();
+		}, 5000);
+
+		// Log form data (for debugging)
+		console.log("Form submitted:", formData);
+	});
 }
