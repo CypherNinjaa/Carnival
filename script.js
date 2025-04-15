@@ -14,7 +14,7 @@ tailwind.config = {
 const eventInfo = {
 	Echoes: {
 		title: "Echoes",
-		content: "<p>Quiz event details coming soon.</p>",
+		content: "<p>Echoes event details coming soon.</p>",
 	},
 	Quizzarad: {
 		title: "Quizzarad",
@@ -22,7 +22,7 @@ const eventInfo = {
 	},
 	DrawMics: {
 		title: "DrawMics",
-		content: "<p>Quiz event details coming soon.</p>",
+		content: "<p>DrawMics event details coming soon.</p>",
 	},
 	BattleofBooks: {
 		title: "Battle of Books",
