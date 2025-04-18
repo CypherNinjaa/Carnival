@@ -14,27 +14,27 @@ tailwind.config = {
 const eventInfo = {
 	Echoes: {
 		title: "Echoes",
-		content: "<p>Echoes event details coming soon.</p>",
+		content: `<a href="https://drive.google.com/file/d/1Y-oGz_M4Bk-foQO1x_cdTUCMCnVnmjsh/view?usp=sharing;" download>Download Now</a>`,
 	},
 	Quizzarad: {
 		title: "Quizzarad",
-		content: "<p>Quiz event details coming soon.</p>",
+		content: `<a href="https://drive.google.com/file/d/1Tn3gIire3yIkJRoSj8-ibIUr3NWaw45G/view?usp=sharing;" download>Download Now</a>`,
 	},
 	DrawMics: {
 		title: "DrawMics",
-		content: "<p>DrawMics event details coming soon.</p>",
+		content: `<a href="https://drive.google.com/file/d/1p1QcoUC_caZd0nOwdNYyWY-3SGpW5r9E/view?usp=sharing.pdf;" download>Download Now</a>`,
 	},
 	BattleofBooks: {
 		title: "Battle of Books",
-		content: "<p>Battle of Books event details coming soon.</p>",
+		content: `<a href="https://drive.google.com/file/d/1FpRmzdX576-XdyKm2UaQCq5JREu7j9EA/view?usp=sharing;" download>Download Now</a>`,
 	},
 	ConCloset: {
 		title: "Con-Closet",
-		content: "<p>Con-Closet event details coming soon.</p>",
+		content: `<a href=";" download>Download Now</a>`,
 	},
 	Dance: {
 		title: "Dance and frolics",
-		content: "<p>Dance and frolics event details coming soon.</p>",
+		content: `<a href="https://drive.google.com/file/d/1FpRmzdX576-XdyKm2UaQCq5JREu7j9EA/view?usp=sharing;" download>Download Now</a>`,
 	},
 };
 
