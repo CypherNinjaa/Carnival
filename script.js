@@ -35,7 +35,7 @@ const eventInfo = {
 	ConCloset: {
 		title: "Con-Closet",
 		content: `<a target="_blank"
-									rel="noopener" href="https://drive.google.com/file/d/1VIv9T50aJ4oRCcWP1Oojz7jshd6McBoy/view?usp=sharing;" download><b>Download Now</b></a>`,
+									rel="noopener" https://drive.google.com/file/d/1y8NhOTKPOKJ8UlwwuL9aAf2C-oHnT2eQ/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 	Dance: {
 		title: "Dance and frolics",
