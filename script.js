@@ -15,32 +15,32 @@ const eventInfo = {
 	Echoes: {
 		title: "Echoes",
 		content: `<a target="_blank"
-									rel="noopener" href="https://drive.google.com/file/d/1Y-oGz_M4Bk-foQO1x_cdTUCMCnVnmjsh/view?usp=sharing;" download>Download Now</a>`,
+									rel="noopener" href="https://drive.google.com/file/d/1Y-oGz_M4Bk-foQO1x_cdTUCMCnVnmjsh/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 	Quizzarad: {
 		title: "Quizzarad",
 		content: `<a target="_blank"
-									rel="noopener" href="https://drive.google.com/file/d/1Tn3gIire3yIkJRoSj8-ibIUr3NWaw45G/view?usp=sharing;" download>Download Now</a>`,
+									rel="noopener" href="https://drive.google.com/file/d/1Tn3gIire3yIkJRoSj8-ibIUr3NWaw45G/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 	DrawMics: {
 		title: "DrawMics",
 		content: `<a target="_blank"
-									rel="noopener" href="https://drive.google.com/file/d/1p1QcoUC_caZd0nOwdNYyWY-3SGpW5r9E/view?usp=sharing.pdf;" download>Download Now</a>`,
+									rel="noopener" href="https://drive.google.com/file/d/1p1QcoUC_caZd0nOwdNYyWY-3SGpW5r9E/view?usp=sharing.pdf;" download><b>Download Now</b></a>`,
 	},
 	BattleofBooks: {
 		title: "Battle of Books",
 		content: `<a target="_blank"
-									rel="noopener" href="https://drive.google.com/file/d/1FpRmzdX576-XdyKm2UaQCq5JREu7j9EA/view?usp=sharing;" download>Download Now</a>`,
+									rel="noopener" href="https://drive.google.com/file/d/1FpRmzdX576-XdyKm2UaQCq5JREu7j9EA/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 	ConCloset: {
 		title: "Con-Closet",
 		content: `<a target="_blank"
-									rel="noopener" href="https://drive.google.com/file/d/1VIv9T50aJ4oRCcWP1Oojz7jshd6McBoy/view?usp=sharing;" download>Download Now</a>`,
+									rel="noopener" href="https://drive.google.com/file/d/1VIv9T50aJ4oRCcWP1Oojz7jshd6McBoy/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 	Dance: {
 		title: "Dance and frolics",
 		content: `<a target="_blank"
-									rel="noopener" https://drive.google.com/file/d/1Sb2CKC8gVFH_m11bVrB5PqRoCc_ibfue/view?usp=sharing;" download>Download Now</a>`,
+									rel="noopener" href="https://drive.google.com/file/d/1Sb2CKC8gVFH_m11bVrB5PqRoCc_ibfue/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 };
 
