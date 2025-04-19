@@ -40,7 +40,7 @@ const eventInfo = {
 	Dance: {
 		title: "Dance and frolics",
 		content: `<a target="_blank"
-									rel="noopener" href="https://drive.google.com/file/d/1FpRmzdX576-XdyKm2UaQCq5JREu7j9EA/view?usp=sharing;" download>Download Now</a>`,
+									rel="noopener" https://drive.google.com/file/d/1Sb2CKC8gVFH_m11bVrB5PqRoCc_ibfue/view?usp=sharing;" download>Download Now</a>`,
 	},
 };
 
