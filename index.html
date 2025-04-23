@@ -312,9 +312,8 @@
 									More
 								</button>
 								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
+									href="#"
+									data-registration-off="Quizzarad"
 									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
 								>
 									Register
@@ -404,9 +403,8 @@
 									More
 								</button>
 								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
+									href="#"
+									data-registration-off="Battle of Books"
 									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
 								>
 									Register
@@ -451,9 +449,8 @@
 									More
 								</button>
 								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
+									href="#"
+									data-registration-off="Drawmics"
 									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
 								>
 									Register
@@ -1269,25 +1266,15 @@
 				</div>
 				<div class="text-gray-800 mb-6 space-y-3">
 					<p>
-						In light of the tragic <b>Pahalgam attack</b> in the Kashmir region
-						of India, and in observance of <b>National Mourning</b>, all
-						celebratory events including <b>Dance and Frolic</b>,
-						<b>Rhythm and Echoes</b>, and <b>ConCloset</b> stand
-						<span class="text-blue-600 font-bold">cancelled</span>.
+						Due to unavoidable circumstances, the event has been postponed. The rescheduled date will be communicated to you within the next 48 hours.
 					</p>
 					<p>
-						We urge everyone to stand in solidarity and be a part of this
-						collective moment of grief and reflection.
+						Please note that your registrations and participation fee remain valid and secure. We appreciate your understanding and continued support.
 					</p>
 					<p>
-						However, the event is still open for <b>Quizzarad</b>,
-						<b>Battle of Books</b>, and <b>Drawmics</b>.
-					</p>
-					<p>
-						Let us honour the lives lost with dignity and respect.<br />
+						Stay tuned for further updates.<br />
 						<span class="font-semibold text-gray-700"
-							>– Amity Institute of English Studies and Research<br />Amity
-							University Patna</span
+							>– Organizing Team, Carnivalesque 4.0<br />Amity Institute of English Studies and Research<br />Amity University Patna</span
 						>
 					</p>
 				</div>
@@ -1350,6 +1337,12 @@
 						if (eventName === "ConCloset") displayName = "ConCloset";
 						if (eventName === "Dance and Frolics")
 							displayName = "Dance and Frolics";
+						if (eventName === "Quizzarad")
+							displayName = "Quizzarad";
+						if (eventName === "Drawmics")
+							displayName = "Drawmics";
+						if (eventName === "Battle of Books")
+							displayName = "Battle of Books";
 						msg.textContent = `Registration is currently off for: ${displayName}`;
 						modal.classList.remove("hidden");
 					});
