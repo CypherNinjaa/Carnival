@@ -147,7 +147,6 @@
 					class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"
 				></div>
 			</div>
-
 			<!-- Content -->
 			<div class="relative z-10 text-center px-4">
 				<p class="text-yellow-400 text-xl mb-4">
@@ -267,9 +266,8 @@
 									More
 								</button>
 								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
+									href="#"
+									data-registration-off="rhythm and echoes"
 									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
 								>
 									Register
@@ -360,9 +358,8 @@
 									More
 								</button>
 								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
+									href="#"
+									data-registration-off="ConCloset"
 									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
 								>
 									Register
@@ -500,9 +497,8 @@
 									More
 								</button>
 								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
+									href="#"
+									data-registration-off="Dance and Frolics"
 									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
 								>
 									Register
@@ -519,6 +515,31 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Registration Off Modal -->
+		<div
+			id="registration-off-modal"
+			class="fixed inset-0 flex items-center justify-center z-[200] bg-black bg-opacity-60 hidden"
+		>
+			<div
+				class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 p-8 relative border-4 border-red-500"
+			>
+				<button
+					id="registration-off-close"
+					class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-2xl font-bold"
+					aria-label="Close"
+				>
+					&times;
+				</button>
+				<div class="mb-4 flex items-center gap-3">
+					<i class="fas fa-ban text-red-600 text-3xl"></i>
+					<h2 class="text-2xl font-bold text-red-700">Registration Off</h2>
+				</div>
+				<div class="text-gray-800 mb-6" id="registration-off-message">
+					Registration is currently closed for this event.
+				</div>
+			</div>
+		</div>
 
 		<!-- Gallery section -->
 		<section id="gallery" class="gallery-section">
@@ -898,7 +919,8 @@
 									alt="Pro - Art Makeup Workshop"
 								/>
 								<p>
-									<b>Pro - Art Makeup</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+									<b>Pro - Art Makeup</b
+									>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 									<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								</p>
 							</div>
@@ -926,7 +948,8 @@
 									alt="Pro - Art Makeup Workshop"
 								/>
 								<p>
-									<b>Pro - Art Makeup</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+									<b>Pro - Art Makeup</b
+									>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 									<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								</p>
 							</div>
@@ -952,7 +975,8 @@
 									alt="Pro - Art Makeup Workshop"
 								/>
 								<p>
-									<b>Pro - Art Makeup</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+									<b>Pro - Art Makeup</b
+									>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 									<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								</p>
 							</div>
@@ -973,22 +997,23 @@
 				</div>
 			</div>
 		</section>
-	<!-- Media Partner -->
-	<section id="media-partner" class="media-partner-section py-12 bg-gray-100">
-		<div class="container mx-auto px-4">
-			<h2 class="text-3xl font-bold text-center mb-6">Media Partner</h2>
-			<p class="text-center text-gray-600 mb-8">
-				Thank you to our amazing Media Partner who makes this carnival possible!
-			</p>
-			<div class="flex justify-center">
-				<img
-					src="assets/Asian Times.jpg"
-					alt="Asian Times"
-					class="max-w-full h-auto rounded-lg shadow-lg"
-				/>
+		<!-- Media Partner -->
+		<section id="media-partner" class="media-partner-section py-12 bg-gray-100">
+			<div class="container mx-auto px-4">
+				<h2 class="text-3xl font-bold text-center mb-6">Media Partner</h2>
+				<p class="text-center text-gray-600 mb-8">
+					Thank you to our amazing Media Partner who makes this carnival
+					possible!
+				</p>
+				<div class="flex justify-center">
+					<img
+						src="assets/Asian Times.jpg"
+						alt="Asian Times"
+						class="max-w-full h-auto rounded-lg shadow-lg"
+					/>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 		<footer class="bg-gray-900 text-white py-10">
 			<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 				<!-- Quick Links -->
@@ -1222,23 +1247,127 @@
 				</div>
 			</div>
 		</div>
+		<!-- Announcement Popup Modal -->
+		<div
+			id="announcement-popup"
+			class="fixed inset-0 flex items-center justify-center z-[100] bg-black bg-opacity-60 hidden"
+		>
+			<div
+				class="bg-white rounded-xl shadow-2xl max-w-lg w-full mx-4 p-4 sm:p-8 relative border-4 border-blue-500"
+			>
+				<button
+					id="announcement-close"
+					class="absolute top-4 right-4 text-gray-500 hover:text-blue-600 text-2xl font-bold"
+					aria-label="Close"
+				>
+					&times;
+				</button>
+				<div class="mb-4">
+					<h2 class="text-2xl font-bold text-red-700">
+						Important Announcement
+					</h2>
+				</div>
+				<div class="text-gray-800 mb-6 space-y-3">
+					<p>
+						In light of the tragic <b>Pahalgam attack</b> in the Kashmir region
+						of India, and in observance of <b>National Mourning</b>, all
+						celebratory events including <b>Dance and Frolic</b>,
+						<b>Rhythm and Echoes</b>, and <b>ConCloset</b> stand
+						<span class="text-blue-600 font-bold">cancelled</span>.
+					</p>
+					<p>
+						We urge everyone to stand in solidarity and be a part of this
+						collective moment of grief and reflection.
+					</p>
+					<p>
+						However, the event is still open for <b>Quizzarad</b>,
+						<b>Battle of Books</b>, and <b>Drawmics</b>.
+					</p>
+					<p>
+						Let us honour the lives lost with dignity and respect.<br />
+						<span class="font-semibold text-gray-700"
+							>– Amity Institute of English Studies and Research<br />Amity
+							University Patna</span
+						>
+					</p>
+				</div>
+				<div class="flex items-center space-x-3">
+					<input
+						type="checkbox"
+						id="dont-show-checkbox"
+						class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+					/>
+					<label for="dont-show-checkbox" class="text-gray-700"
+						>Do not show again today</label
+					>
+				</div>
+				<button
+					id="announcement-dontshow"
+					class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+					disabled
+				>
+					Confirm
+				</button>
+			</div>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<!-- <script>
-			if ("serviceWorker" in navigator) {
-				window.addEventListener("load", () => {
-					navigator.serviceWorker
-						.register("service-worker.js")
-						.then((registration) => {
-							console.log(
-								"Service Worker registered with scope:",
-								registration.scope
-							);
-						})
-						.catch((error) => {
-							console.error("Service Worker registration failed:", error);
-						});
+		<script>
+			// Announcement Popup Logic
+			(function () {
+				const popup = document.getElementById("announcement-popup");
+				const closeBtn = document.getElementById("announcement-close");
+				const dontShowBtn = document.getElementById("announcement-dontshow");
+				const LS_KEY = "hideAnnouncementPopup";
+
+				function showPopup() {
+					if (!localStorage.getItem(LS_KEY)) {
+						popup.classList.remove("hidden");
+					}
+				}
+				function hidePopup() {
+					popup.classList.add("hidden");
+				}
+				closeBtn.addEventListener("click", hidePopup);
+				dontShowBtn.addEventListener("click", function () {
+					localStorage.setItem(LS_KEY, "1");
+					hidePopup();
 				});
-			}
-		</script> -->
+				window.addEventListener("DOMContentLoaded", showPopup);
+			})();
+
+			// Registration Off Modal Logic
+			(function () {
+				const modal = document.getElementById("registration-off-modal");
+				const closeBtn = document.getElementById("registration-off-close");
+				const msg = document.getElementById("registration-off-message");
+				document.querySelectorAll("a[data-registration-off]").forEach((btn) => {
+					btn.addEventListener("click", function (e) {
+						e.preventDefault();
+						const eventName = btn.getAttribute("data-registration-off");
+						let displayName = eventName;
+						if (eventName === "rhythm and echoes")
+							displayName = "Rhythm and Echoes";
+						if (eventName === "ConCloset") displayName = "ConCloset";
+						if (eventName === "Dance and Frolics")
+							displayName = "Dance and Frolics";
+						msg.textContent = `Registration is currently off for: ${displayName}`;
+						modal.classList.remove("hidden");
+					});
+				});
+				closeBtn.addEventListener("click", function () {
+					modal.classList.add("hidden");
+				});
+				// Enable Confirm button when checkbox is checked
+				(function () {
+					const checkbox = document.getElementById("dont-show-checkbox");
+					const confirmBtn = document.getElementById("announcement-dontshow");
+					if (checkbox && confirmBtn) {
+						checkbox.addEventListener("change", function () {
+							confirmBtn.disabled = !checkbox.checked;
+						});
+					}
+				})();
+			})();
+		</script>
 	</body>
 </html>
