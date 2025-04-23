@@ -13,213 +13,34 @@ tailwind.config = {
 // Event information for popup
 const eventInfo = {
 	Echoes: {
-		title: "Echoes of Lingo",
-		content: `
-            <p class="mb-4">Hey there, dance enthusiasts! Get ready to groove and twirl at the exhilarating cultural dance competition—"Dance and Frolic"! Organized by Amity Institute of English Studies and Research as part of our three-day Literature Festival, Carnivalesque 3.0. Immerse yourself in a vibrant celebration of diverse cultures through the universal language of dance. Show off your moves, unleash your creativity, and captivate the audience with your rhythmic prowess. Join us for an experience filled with electrifying performances, friendly competition, and the chance to win exciting prizes. Don't miss out on this opportunity to shine on the dance floor! So, lace up your dancing shoes and let the "Dance and Frolic" extravaganza begin!</p>
-
-            <h4 class="font-bold mt-4">Concept of the Event:</h4>
-            <p class="mt-2">Participants are invited to perform any style of dance, including regional, national, or international forms, as a group, while adhering to the rules of each respective style.</p>
-
-            <h4 class="font-bold mt-4">Eligibility:</h4>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>Junior Group: Ages 13 to 17</li>
-                <li>Senior Group: Ages 17 and above</li>
-                <li>Separate category for Amity students</li>
-            </ul>
-
-            <h4 class="font-bold mt-4">Rules and Regulations (Offline):</h4>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>Performances must have a particular theme related to our rich culture.</li>
-                <li>Participants can choose any global dance form (Indian or Western) such as Kathak, Salsa, Jazz, Kathakali, Bharat Natyam, Manipuri, Kuchipudi, Mohiniyattam, Odissi, Sattriya, Hip-Hop, etc.</li>
-                <li>Solo or group performances are allowed. Group performances must have between 2 to 5 participants.</li>
-                <li>Time limit: 3-5 minutes. Exceeding the time limit will result in negative points.</li>
-                <li>Performances should authentically and respectfully showcase cultural traditions and heritage.</li>
-                <li>Appropriate attire must be worn to ensure respect for cultural sentiments and norms.</li>
-                <li>Music selection should be culturally appropriate and respectful, representing the style and traditions of the dance being performed.</li>
-                <li>Judging criteria include costume, visual presentation, expression, coordination, and audience engagement.</li>
-                <li>Points will be awarded based on Taal, Technique, Rhythm, Abhinaya (Expression), Attire, Footwork, and overall presentation.</li>
-                <li>The decision of the jury will be final; no further claims shall be entertained.</li>
-                <li>Non-compliance with any of the above-mentioned rules may lead to disqualification.</li>
-            </ul>
-
-            <h4 class="font-bold mt-4">Rules and Regulations (Online):</h4>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>Performances must have a particular theme related to our rich culture.</li>
-                <li>Participants can choose any global dance form (Indian or Western) such as Kathak, Salsa, Jazz, Kathakali, Bharat Natyam, Manipuri, Kuchipudi, Mohiniyattam, Odissi, Sattriya, Hip-Hop, etc.</li>
-                <li>Solo or group performances are allowed. Group performances must have between 2 to 5 participants.</li>
-                <li>Time limit: 3-5 minutes. Exceeding the time limit will result in negative points.</li>
-                <li>Performances should authentically and respectfully showcase cultural traditions and heritage.</li>
-                <li>Appropriate attire must be worn to ensure respect for cultural sentiments and norms.</li>
-                <li>Music selection should be culturally appropriate and respectful, representing the style and traditions of the dance being performed.</li>
-                <li>Judging criteria include costume, visual presentation, and expression.</li>
-                <li>Points will be awarded based on Taal, Technique, Rhythm, Abhinaya (Expression), Attire, Footwork, and overall presentation.</li>
-                <li>The decision of the jury will be final; no further claims shall be entertained.</li>
-                <li>Videos must be submitted in one continuous take, without any cuts or edits during the performance.</li>
-                <li>Poor audio or video quality may lead to elimination.</li>
-                <li>Participants must adhere to the specified submission deadline: April 21st, 2024. Submit your video to: danceandfrolicaiesr@gmail.com</li>
-                <li>Late submissions will not be accepted.</li>
-            </ul>
-
-            <h4 class="font-bold mt-4">Registration:</h4>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>Registration fee: Rs.100 (excluding GST).</li>
-                <li>No refunds will be initiated once registration is done.</li>
-                <li>Registration is compulsory for all participants through the provided link or QR code.</li>
-                <li>Non-compliance with any instructions will lead to disqualification.</li>
-                <li>Certificate of Participation for all participants.</li>
-                <li>Certificate of Merit and prizes for the winners.</li>
-                <li>E-certificates will be provided for online participants.</li>
-            </ul>
-
-            <h4 class="font-bold mt-4">Note:</h4>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-                <li>Results for online participation will be announced on our website and social media platforms by April 27th, 2024.</li>
-                <li>Participants are required to bring one valid ID card of their institution or organization.</li>
-                <li>Refreshments will be offered to participants.</li>
-                <li>The cafeteria will be open to all participants; they can bring money for the same.</li>
-                <li>For any queries: 8340109368 and 7209746518.</li>
-            </ul>
-        `,
-		registrationUrl: "https://forms.google.com/danceandfrolic",
+		title: "Echoes",
+		content: `<a target="_blank"
+									rel="noopener" href="https://drive.google.com/file/d/1Y-oGz_M4Bk-foQO1x_cdTUCMCnVnmjsh/view?usp=sharing;" download><b>Download Now</b></a>`,
+	},
+	Quizzarad: {
+		title: "Quizzarad",
+		content: `<a target="_blank"
+									rel="noopener" href="https://drive.google.com/file/d/1Tn3gIire3yIkJRoSj8-ibIUr3NWaw45G/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 	DrawMics: {
-		title: "DrawMics - Comic Strip Drawing Competition",
-		content: `
-        <p class="mb-4">Welcome to <strong>DrawMics</strong>, where creativity knows no bounds! Step into the arena of artistic expression and unleash your imagination in an electrifying comic strip drawing competition open to all. Let your unique style shine as you captivate with your innovative creations.</p>
-
-        <h4 class="font-bold mt-4">Concept of the Event:</h4>
-        <p class="mt-2">Participants are expected to draw a comic strip narrating a story or concept based on the theme chosen during registration.</p>
-
-        <h4 class="font-bold mt-4">Eligibility:</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Junior Group: Ages 13 to 17</li>
-            <li>Senior Group: Ages 17 and above</li>
-            <li>Separate category for Amity students</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Rules and Regulations (Offline):</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Glaze sheet will be provided by the organizers</li>
-            <li>Any dry medium is allowed (e.g., graphite, charcoal, colored pencils, pastels)</li>
-            <li>No wet mediums (e.g., watercolors, acrylics) or digital artwork allowed</li>
-            <li>All artwork must be original — no plagiarism</li>
-            <li>No mobile phone usage during the competition</li>
-            <li>The jury's decision will be final</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Topics for Seniors (Offline & Online):</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Artificial Intelligence</li>
-            <li>Cities in the Future</li>
-            <li>Animal Abuse</li>
-            <li>Aatmanirbhar Bharat</li>
-            <li>A Day with Dinosaurs</li>
-            <li>Independent Comics</li>
-            <li>Socio-Political Commentary</li>
-            <li>Manga and Anime Influence</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Topics for Juniors (Offline & Online):</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Underwater World/City</li>
-            <li>Deforestation</li>
-            <li>Wildlife</li>
-            <li>My Dream City/Playground</li>
-            <li>If I Were a Superhero</li>
-            <li>Villains in Comics</li>
-            <li>Sidekick Characters</li>
-            <li>Comic Strips Analysis</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Rules and Regulations (Online):</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Individual participation only</li>
-            <li>Choose a topic from the list above</li>
-            <li>Comic strips must include dialogue or sentences as part of the drawing</li>
-            <li>Identity card submission is mandatory</li>
-            <li>Each submission must be in PDF format, named as per participant's ID</li>
-            <li>Late submissions will not be accepted</li>
-            <li>Deadline: April 21st, 2024</li>
-            <li>Submit to: <a href="mailto:DrawmicsAIESR@gmail.com" class="text-blue-500 underline">DrawmicsAIESR@gmail.com</a></li>
-            <li>Use the provided comic strip template for submissions (View/Download link to be shared separately)</li>
-            <li>Poor quality submissions may be rejected</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Registration:</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Registration Fee: ₹100 (excluding GST)</li>
-            <li>No refunds post registration</li>
-            <li>Participation certificate for all</li>
-            <li>Merit certificate and prizes for winners</li>
-            <li>E-certificates for online participants</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Note:</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Online results will be announced by April 27th, 2024 on our website and social media</li>
-            <li>Participants must carry a valid institutional ID card</li>
-            <li>Refreshments will be provided</li>
-            <li>The cafeteria will be open (participants may bring money)</li>
-            <li>For queries, contact: 8340109368 or 917209746518</li>
-        </ul>
-    `,
-		registrationUrl: "https://forms.google.com/drawmics",
+		title: "DrawMics",
+		content: `<a target="_blank"
+									rel="noopener" href="https://drive.google.com/file/d/1p1QcoUC_caZd0nOwdNYyWY-3SGpW5r9E/view?usp=sharing.pdf;" download><b>Download Now</b></a>`,
 	},
-
-	Quizards: {
-		title: "Quizards - The Ultimate Lit & Pop Culture Quiz",
-		content: `
-        <p class="mb-4">Does literature captivate you, or does the vibrant cinematic world entice you? Welcome to <strong>Quizards</strong> — a quiz like no other! Hosted by the Amity Institute of English Studies and Research, this thrilling adventure will test your knowledge across the world of movies, novels, series, music, and more. Get ready for an enchanting roller coaster of literary and pop culture trivia!</p>
-
-        <h4 class="font-bold mt-4">Concept of the Event:</h4>
-        <p class="mt-2">The quiz consists of two rounds:</p>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li><strong>Round 1:</strong> Questions from English literature including poetry, novels, famous quotes, and dramas.</li>
-            <li><strong>Round 2:</strong> Conducted through a PowerPoint presentation with fun and engaging questions based on series, characters, dialogues, and much more.</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Eligibility:</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Junior Group: Ages 13 to 17</li>
-            <li>Senior Group: Ages 17 and above</li>
-            <li>Separate category for Amity students</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Rules and Regulations:</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Two rounds of competition</li>
-            <li>Round 1: 35 questions in 1 hour, 1 point for each correct answer, no negative marking</li>
-            <li>Top 10 scorers qualify for Round 2</li>
-            <li>Round 2: 5 points for correct answers, -1 for incorrect responses</li>
-            <li>Final Round: 6 participants divided into two groups (3 per team)</li>
-            <li>Quiz conducted in English only</li>
-            <li>Quiz master's rules during the event are final and will be disclosed on the spot</li>
-            <li>Use of mobile phones during the quiz is prohibited</li>
-            <li>The jury's decision is final</li>
-            <li>Failure to follow rules may result in disqualification</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Registration:</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Fee: ₹100 (excluding GST)</li>
-            <li>No refunds after registration</li>
-            <li>Each participant must register individually</li>
-            <li>Registration via the link or QR code is mandatory</li>
-            <li>Certificates of Participation for all</li>
-            <li>Certificates of Merit and prizes for winners</li>
-            <li>E-certificates for online participants</li>
-        </ul>
-
-        <h4 class="font-bold mt-4">Note:</h4>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Bring a valid institutional ID card</li>
-            <li>Refreshments will be provided</li>
-            <li>The cafeteria will be open (participants may bring money)</li>
-            <li>Online payments are at participants' own risk — contact us for clarifications</li>
-            <li>For queries, contact: 8340109368 or 917209746518</li>
-        </ul>
-    `,
-		registrationUrl: "https://forms.google.com/quizards",
+	BattleofBooks: {
+		title: "Battle of Books",
+		content: `<a target="_blank"
+									rel="noopener" href="https://drive.google.com/file/d/1FpRmzdX576-XdyKm2UaQCq5JREu7j9EA/view?usp=sharing;" download><b>Download Now</b></a>`,
+	},
+	ConCloset: {
+		title: "Con-Closet",
+		content: `<a target="_blank"
+									rel="noopener" href="https://drive.google.com/file/d/1y8NhOTKPOKJ8UlwwuL9aAf2C-oHnT2eQ/view?usp=sharing" download><b>Download Now</b></a>`,
+	},
+	Dance: {
+		title: "Dance and frolics",
+		content: `<a target="_blank"
+									rel="noopener" href="https://drive.google.com/file/d/1Sb2CKC8gVFH_m11bVrB5PqRoCc_ibfue/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
 };
 
@@ -335,8 +156,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (event) {
 				modalTitle.textContent = event.title;
 				modalContent.innerHTML = event.content;
+				// Always open the official registration link
 				modalRegister.onclick = function () {
-					window.open(event.registrationUrl, "_blank");
+					window.open("https://www.amity.edu/nspg/CARNIVALESQUE2025", "_blank");
 				};
 
 				// Show modal
@@ -378,16 +200,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Handle register buttons in event cards
-	document.querySelectorAll(".register-btn").forEach((btn, index) => {
+	document.querySelectorAll(".register-btn").forEach((btn) => {
 		btn.addEventListener("click", function (e) {
 			e.preventDefault();
-
-			// Extract event type based on index
-			const eventTypes = Object.keys(eventInfo);
-			if (index < eventTypes.length) {
-				const eventType = eventTypes[index];
-				window.open(eventInfo[eventType].registrationUrl, "_blank");
-			}
+			window.open("https://www.amity.edu/nspg/CARNIVALESQUE2025", "_blank");
 		});
 	});
 });
@@ -479,11 +295,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (index === -1) {
 			// Add to favorites
 			favorites.push(eventType);
-			showToast(`Added "${eventInfo[eventType].title}" to favorites!`);
+			const title =
+				(eventInfo[eventType] && eventInfo[eventType].title) ||
+				eventType.replace(/([A-Z])/g, " $1").trim();
+			showToast(`Added "${title}" to favorites!`);
 		} else {
 			// Remove from favorites
 			favorites.splice(index, 1);
-			showToast(`Removed "${eventInfo[eventType].title}" from favorites!`);
+			const title =
+				(eventInfo[eventType] && eventInfo[eventType].title) ||
+				eventType.replace(/([A-Z])/g, " $1").trim();
+			showToast(`Removed "${title}" from favorites!`);
 		}
 
 		// Save to localStorage
@@ -659,37 +481,38 @@ const swiper = new Swiper(".swiper", {
 	speed: 800,
 });
 // Contact form handling
-const contactForm = document.getElementById('contactForm');
+const contactForm = document.getElementById("contactForm");
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = {
-            name: this.querySelector('input[name="name"]').value,
-            email: this.querySelector('input[name="email"]').value,
-            subject: this.querySelector('input[name="subject"]').value,
-            message: this.querySelector('textarea[name="message"]').value
-        };
-        
-        // Create success message element
-        const successMessage = document.createElement('div');
-        successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4';
-        successMessage.innerHTML = `
+	contactForm.addEventListener("submit", function (e) {
+		e.preventDefault();
+
+		// Get form data
+		const formData = {
+			name: this.querySelector('input[name="name"]').value,
+			email: this.querySelector('input[name="email"]').value,
+			subject: this.querySelector('input[name="subject"]').value,
+			message: this.querySelector('textarea[name="message"]').value,
+		};
+
+		// Create success message element
+		const successMessage = document.createElement("div");
+		successMessage.className =
+			"bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4";
+		successMessage.innerHTML = `
             <strong class="font-bold">Thank you!</strong>
             <span class="block sm:inline"> Your message has been sent successfully. We'll get back to you soon.</span>
         `;
-        
-        // Clear form and show success message
-        this.reset();
-        this.parentNode.appendChild(successMessage);
-        
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-            successMessage.remove();
-        }, 5000);
-        
-        // Log form data (for debugging)
-        console.log('Form submitted:', formData);
-    });
+
+		// Clear form and show success message
+		this.reset();
+		this.parentNode.appendChild(successMessage);
+
+		// Remove success message after 5 seconds
+		setTimeout(() => {
+			successMessage.remove();
+		}, 5000);
+
+		// Log form data (for debugging)
+		console.log("Form submitted:", formData);
+	});
 }

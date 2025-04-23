@@ -383,10 +383,10 @@ h1, h2, h3, h4, h5, h6, .nav-link {
 	}
 }
 
-/* Pause animation on hover */
+/* Pause animation on hover
 .sponsors-marquee-container:hover .sponsors-track {
 	animation-play-state: paused;
-}
+} */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
