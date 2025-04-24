@@ -202,8 +202,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Handle register buttons in event cards
 	document.querySelectorAll(".register-btn").forEach((btn) => {
 		btn.addEventListener("click", function (e) {
-			e.preventDefault();
-			window.open("https://www.amity.edu/nspg/CARNIVALESQUE2025", "_blank");
+			// Only open registration link if data-registration-off is NOT present
+			if (!btn.hasAttribute("data-registration-off")) {
+				e.preventDefault();
+				window.open("https://www.amity.edu/nspg/CARNIVALESQUE2025", "_blank");
+			}
+			// else: let the HTML/modal logic handle the "registration off" case
 		});
 	});
 });
