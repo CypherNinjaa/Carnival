@@ -1,532 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CARNIVALESQUE 4.0 | AUP</title>
-		<!-- Tailwind CSS -->
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link rel="stylesheet" href="styles.css" />
-		<!-- Favicon -->
-		<link
-			rel="icon"
-			href="assets/android-chrome-512x512.png"
-			type="image/png"
-		/>
-		<!-- Google Fonts -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&family=Playfair+Display:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
 
-		<!-- swiper css -->
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/>
-		<!-- Font Awesome CDN for icons -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-			integrity="sha512-..."
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CARNIVALESQUE 4.0 | AUP</title>
+	<base href="/" />
+	<!-- Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="/styles.css" />
+	<!-- Favicon -->
+	<link rel="icon" href="/assets/android-chrome-512x512.png" type="image/png" />
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&family=Playfair+Display:wght@400;700&display=swap"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+		rel="stylesheet" />
 
-		<!-- Font Awesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-		/>
-		<script src="script.js" defer></script>
-	</head>
-	<body class="overflow-x-hidden">
-		<!-- Header/Navigation -->
-		<header class="fixed w-full bg-white z-50 shadow-md">
-			<nav class="container mx-auto px-6 py-3">
-				<div class="flex justify-between items-center">
-					<div class="flex items-center">
-						<a href="#home" class="text-2xl font-bold">
-							<span class="text-primary">CARNIV</span
-							><span class="text-black">ALESQUE</span>
-							<span class="text-secondary">4.0</span>
-						</a>
-					</div>
-					<div class="hidden md:flex items-center space-x-8">
-						<a
-							href="#home"
-							class="nav-link font-medium text-gray-600 hover:text-gray-900"
-							><b>Home</b></a
-						>
-						<a
-							href="#events"
-							class="nav-link text-gray-700 hover:text-primary transition"
-							><b>Events</b></a
-						>
-						<a
-							href="#gallery"
-							class="nav-link text-gray-700 hover:text-primary transition"
-							><b>Gallery</b></a
-						>
-						<a
-							href="#sponsors"
-							class="nav-link text-gray-700 hover:text-primary transition"
-							><b>sponsors</b></a
-						>
-						<a
-							href="#about"
-							class="nav-link text-gray-700 hover:text-primary transition"
-							><b>About</b></a
-						>
-						<a
-							href="#contact"
-							class="nav-link text-gray-700 hover:text-primary transition"
-							><b>Contact</b></a
-						>
-					</div>
-					<div class="md:hidden">
-						<button id="menu-toggle" class="text-gray-700">
-							<i class="fas fa-bars text-2xl"></i>
-						</button>
-					</div>
+	<!-- swiper css -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<!-- Font Awesome CDN for icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="/script.js" defer></script>
+</head>
+
+<body class="overflow-x-hidden">
+	<!-- Header/Navigation -->
+	<header class="fixed w-full bg-white z-50 shadow-md">
+		<nav class="container mx-auto px-6 py-3">
+			<div class="flex justify-between items-center">
+				<div class="flex items-center">
+					<a href="#home" class="text-2xl font-bold">
+						<span class="text-primary">CARNIV</span><span class="text-black">ALESQUE</span>
+						<span class="text-secondary">4.0</span>
+					</a>
 				</div>
-				<!-- Mobile Menu -->
-				<div id="mobile-menu" class="hidden md:hidden mt-4">
-					<a
-						href="#home"
-						class="block py-2 text-gray-700 hover:text-primary transition"
-						><b>Home</b></a
-					>
-
-					<a
-						href="#events"
-						class="block py-2 text-gray-700 hover:text-primary transition"
-						><b>Events</b></a
-					>
-					<a
-						href="#gallery"
-						class="block py-2 text-gray-700 hover:text-primary transition"
-						><b>Gallery</b></a
-					>
-					<a
-						href="#sponsors"
-						class="block py-2 text-gray-700 hover:text-primary transition"
-						><b>sponsors</b></a
-					>
-					<a
-						href="#about"
-						class="block py-2 text-gray-700 hover:text-primary transition"
-						><b>About</b></a
-					>
-					<a
-						href="#contact"
-						class="block py-2 text-gray-700 hover:text-primary transition"
-						><b>Contact</b></a
-					>
+				<div class="hidden md:flex items-center space-x-8">
+					<a href="#home" class="nav-link font-medium text-gray-600 hover:text-gray-900"><b>Home</b></a>
+					<a href="#events" class="nav-link text-gray-700 hover:text-primary transition"><b>Events</b></a>
+					<a href="#gallery" class="nav-link text-gray-700 hover:text-primary transition"><b>Gallery</b></a>
+					<a href="#sponsors" class="nav-link text-gray-700 hover:text-primary transition"><b>sponsors</b></a>
+					<a href="#about" class="nav-link text-gray-700 hover:text-primary transition"><b>About</b></a>
+					<a href="#contact" class="nav-link text-gray-700 hover:text-primary transition"><b>Contact</b></a>
 				</div>
-			</nav>
-		</header>
-
-		<!-- Hero Section -->
-		<section
-			id="home"
-			class="relative min-h-screen flex flex-col items-center justify-center bg-gray-900"
-		>
-			<!-- Background Image & Overlay -->
-			<div class="absolute inset-0">
-				<img
-					src="assets/bg2.jpg"
-					alt="literary Event Background"
-					class="w-full h-full object-cover opacity-30"
-				/>
-				<div
-					class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"
-				></div>
+				<div class="md:hidden">
+					<button id="menu-toggle" class="text-gray-700">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
 			</div>
-			<!-- Content -->
-			<div class="relative z-10 text-center px-4">
-				<p class="text-yellow-400 text-xl mb-4">
-					<br />
-					<br />
-					Annual Literary & Cultural Fest 2025
-				</p>
-				<h1 class="text-4xl md:text-7xl font-bold mb-6">
-					<span class="text-primary">CARNIV</span
-					><span class="text-white">ALESQUE</span>
-					<span class="text-secondary">4.0</span>
-				</h1>
-				<p class="text-1xl md:text-1xl font-bold mb-8">
-					<span id="typing-container" class="text-green-400"
-						><span id="typed-text"></span><span id="cursor">|</span></span
-					>
-				</p>
-				<p class="text-white text-lg md:text-xl mb-12 max-w-3xl mx-auto">
-					Step into a world where stories come alive, ideas collide, and
-					creativity takes center stage. Hosted by AIESR, Carnivalesque 4.0 is
-					your gateway to literary thrills, vibrant competitions, and
-					unforgettable moments.
-				</p>
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="hidden md:hidden mt-4">
+				<a href="#home" class="block py-2 text-gray-700 hover:text-primary transition"><b>Home</b></a>
 
-				<!-- Buttons -->
-				<div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
-					<a
-						href="#events"
-						class="button-hover bg-primary hover:bg-green-00 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg"
-					>
-						Explore Events
-					</a>
-					<a
-						href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-						target="_blank"
-						rel="noopener"
-						class="button-hover bg-secondary hover:bg-yellow-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg"
-					>
-						Registration
-					</a>
-				</div>
+				<a href="#events" class="block py-2 text-gray-700 hover:text-primary transition"><b>Events</b></a>
+				<a href="#gallery" class="block py-2 text-gray-700 hover:text-primary transition"><b>Gallery</b></a>
+				<a href="#sponsors" class="block py-2 text-gray-700 hover:text-primary transition"><b>sponsors</b></a>
+				<a href="#about" class="block py-2 text-gray-700 hover:text-primary transition"><b>About</b></a>
+				<a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition"><b>Contact</b></a>
+			</div>
+		</nav>
+	</header>
 
-				<!-- Countdown Timer -->
-				<div class="text-center py-6 bg-transparent">
-					<h2 class="text-2xl font-semibold text-white mb-4">
-						Event Begins In
-					</h2>
-					<div
-						id="countdown"
-						class="flex justify-center gap-6 text-3xl font-bold text-white"
-					>
-						<div>
-							<span id="days">00</span>
-							<div class="text-xs mt-2 tracking-widest">DAYS</div>
-						</div>
-						<div>
-							<span id="hours">00</span>
-							<div class="text-xs mt-2 tracking-widest">HOURS</div>
-						</div>
-						<div>
-							<span id="minutes">00</span>
-							<div class="text-xs mt-2 tracking-widest">MINUTES</div>
-						</div>
-						<div>
-							<span id="seconds">00</span>
-							<div class="text-xs mt-2 tracking-widest">SECONDS</div>
-						</div>
+	<!-- Hero Section -->
+	<section id="home" class="relative min-h-screen flex flex-col items-center justify-center bg-gray-900">
+		<!-- Background Image & Overlay -->
+		<div class="absolute inset-0">
+			<img src="/assets/bg2.jpg" alt="literary Event Background" class="w-full h-full object-cover opacity-30" />
+			<div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"></div>
+		</div>
+		<!-- Content -->
+		<div class="relative z-10 text-center px-4">
+			<p class="text-yellow-400 text-xl mb-4">
+				<br />
+				<br />
+				Annual Literary & Cultural Fest 2025
+			</p>
+			<h1 class="text-4xl md:text-7xl font-bold mb-6">
+				<span class="text-primary">CARNIV</span><span class="text-white">ALESQUE</span>
+				<span class="text-secondary">4.0</span>
+			</h1>
+			<p class="text-1xl md:text-1xl font-bold mb-8">
+				<span id="typing-container" class="text-green-400"><span id="typed-text"></span><span
+						id="cursor">|</span></span>
+			</p>
+			<p class="text-white text-lg md:text-xl mb-12 max-w-3xl mx-auto">
+				Step into a world where stories come alive, ideas collide, and
+				creativity takes center stage. Hosted by AIESR, Carnivalesque 4.0 is
+				your gateway to literary thrills, vibrant competitions, and
+				unforgettable moments.
+			</p>
+
+			<!-- Buttons -->
+			<div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+				<a href="#events"
+					class="button-hover bg-primary hover:bg-green-00 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+					Explore Events
+				</a>
+				<a href="https://www.amity.edu/nspg/CARNIVALESQUE2025" target="_blank" rel="noopener"
+					class="button-hover bg-secondary hover:bg-yellow-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+					Registration
+				</a>
+			</div>
+
+			<!-- Countdown Timer -->
+			<div class="text-center py-6 bg-transparent">
+				<h2 class="text-2xl font-semibold text-white mb-4">
+					Event Begins In
+				</h2>
+				<div id="countdown" class="flex justify-center gap-6 text-3xl font-bold text-white">
+					<div>
+						<span id="days">00</span>
+						<div class="text-xs mt-2 tracking-widest">DAYS</div>
+					</div>
+					<div>
+						<span id="hours">00</span>
+						<div class="text-xs mt-2 tracking-widest">HOURS</div>
+					</div>
+					<div>
+						<span id="minutes">00</span>
+						<div class="text-xs mt-2 tracking-widest">MINUTES</div>
+					</div>
+					<div>
+						<span id="seconds">00</span>
+						<div class="text-xs mt-2 tracking-widest">SECONDS</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- Search Bar -->
-		<div class="search-container">
-			<input type="text" id="searchInput" placeholder="Search events..." />
-			<i class="fas fa-search search-icon"></i>
 		</div>
+	</section>
+	<!-- Search Bar -->
+	<div class="search-container">
+		<input type="text" id="searchInput" placeholder="Search events..." />
+		<i class="fas fa-search search-icon"></i>
+	</div>
 
-		<!-- Event Filter Bar -->
-		<div class="filter-container">
-			<button class="filter-btn active" data-filter="all">All Events</button>
-			<button class="filter-btn" data-filter="favorites">Favorites</button>
-			<button class="filter-btn" data-filter="30-April">
-				30<sup>th</sup> April
-			</button>
-			<button class="filter-btn" data-filter="1-May">1<sup>st</sup> May</button>
-		</div>
-		<!-- Events Section -->
-		<section id="events" class="py-20 bg-gray-100">
-			<div class="container mx-auto px-4">
-				<h2 class="text-4xl font-bold text-center mb-12">Featured Events</h2>
-				<div class="grid md:grid-cols-3 gap-8">
-					
-					<!-- Event Card 1 -->
-					<div
-						class="event-card bg-white rounded-lg shadow-lg overflow-hidden"
-						data-date="1-May"
-					>
-						<div class="relative">
-							<img
-								src="assets/echos of lingo.jpg"
-								alt="Echoes of Lingo"
-								class="w-full h-auto object-contain bg-white"
-							/>
-							<div
-								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
-							></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-bold mb-2">Rhythm & Echoes</h3>
-							<p class="text-gray-600 mb-4">
-								It is a multilingual open mic contest in any regional language
-								of your choice. Ex: Hindi, English, French, Korean, Marathi,
-								etc.
-							</p>
-							<div class="flex space-x-3">
-								<button
-									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
-									data-event="Echoes"
-								>
-									More
-								</button>
-								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
-									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
-								>
-									Register
-								</a>
-								<button
-									class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-									data-event="Echoes"
-								>
-									<i class="far fa-heart"></i>
-								</button>
-							</div>
+	<!-- Event Filter Bar -->
+	<div class="filter-container">
+		<button class="filter-btn active" data-filter="all">All Events</button>
+		<button class="filter-btn" data-filter="favorites">Favorites</button>
+		<button class="filter-btn" data-filter="30-April">
+			30<sup>th</sup> April
+		</button>
+		<button class="filter-btn" data-filter="1-May">1<sup>st</sup> May</button>
+	</div>
+	<!-- Events Section -->
+	<section id="events" class="py-20 bg-gray-100">
+		<div class="container mx-auto px-4">
+			<h2 class="text-4xl font-bold text-center mb-12">Featured Events</h2>
+			<div class="grid md:grid-cols-3 gap-8">
+
+				<!-- Event Card 1 -->
+				<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-date="1-May">
+					<div class="relative">
+						<img src="/assets/echos of lingo.jpg" alt="Echoes of Lingo"
+							class="w-full h-auto object-contain bg-white" />
+						<div
+							class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0">
 						</div>
 					</div>
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">Rhythm & Echoes</h3>
+						<p class="text-gray-600 mb-4">
+							It is a multilingual open mic contest in any regional language
+							of your choice. Ex: Hindi, English, French, Korean, Marathi,
+							etc.
+						</p>
+						<div class="flex space-x-3">
+							<button
+								class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+								data-event="Echoes">
+								More
+							</button>
+							<a href="https://www.amity.edu/nspg/CARNIVALESQUE2025" target="_blank" rel="noopener"
+								class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">
+								Register
+							</a>
+							<button
+								class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+								data-event="Echoes">
+								<i class="far fa-heart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
 
-					<!-- Event Card 2 -->
+				<!-- Event Card 2 -->
+				<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-date="30-April">
+					<div class="relative">
+						<img src="/assets/quizard.jpg" alt="QUIZZARD" class="w-full h-auto object-contain bg-white" />
+						<div
+							class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0">
+						</div>
+					</div>
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">Quizzard</h3>
+						<p class="text-gray-600 mb-4">
+							An exciting quiz competition based on language and literature.
+							Participants will be asked questions based on language,
+							literature, movies, series, dramas, etc.
+						</p>
+						<div class="flex space-x-3">
+							<button
+								class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+								data-event="Quizzarad">
+								More
+							</button>
+							<a href="https://www.amity.edu/nspg/CARNIVALESQUE2025" target="_blank" rel="noopener"
+								class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">
+								Register
+							</a>
+							<button
+								class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+								data-event="Quizzarad">
+								<i class="far fa-heart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event Card 3 -->
+				<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-date="1-May">
+					<div class="relative">
+						<img src="/assets/concloset.jpg" alt="Con-Closet"
+							class="w-full h-auto object-contain bg-white" />
+						<div
+							class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0">
+						</div>
+					</div>
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">Con-Closet</h3>
+						<p class="text-gray-600 mb-4">
+							It is a cosplay contest where participants get to dress up as
+							their favorite characters inspired by the theme of the event.
+						</p>
+						<div class="flex space-x-3">
+							<button
+								class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+								data-event="ConCloset">
+								More
+							</button>
+							<a href="https://www.amity.edu/nspg/CARNIVALESQUE2025" target="_blank" rel="noopener"
+								class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">
+								Register
+							</a>
+							<button
+								class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+								data-event="ConCloset">
+								<i class="far fa-heart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event Card 4 -->
+				<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-date="30-April">
+					<div class="relative">
+						<img src="/assets/battle of books.jpg" alt="Battle of Books"
+							class="w-full h-auto object-contain bg-white" />
+						<div
+							class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0">
+						</div>
+					</div>
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">Battle of Books</h3>
+						<p class="text-gray-600 mb-4">
+							Powerful and intellectual contest for debate where participants
+							get a chance to face off against fellow debaters on the topic
+							assigned for the event.
+						</p>
+						<div class="flex space-x-3">
+							<button
+								class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+								data-event="BattleofBooks">
+								More</button>
+							<a href="https://www.amity.edu/nspg/CARNIVALESQUE2025" target="_blank" rel="noopener"
+								class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">
+								Register
+							</a>
+							<button
+								class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+								data-event="BattleofBooks">
+								<i class="far fa-heart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event Card 5 -->
+				<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-date="30-April">
+					<div class="relative">
+						<img src="/assets/drawmics.jpg" alt="DrawMics" class="w-full h-auto object-contain bg-white" />
+						<div
+							class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0">
+						</div>
+					</div>
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">Drawmics</h3>
+						<p class="text-gray-600 mb-4">
+							It is a mix of drawing and comics used to tell stories. A
+							creative comic strip drawing competition based on the themes
+							chosen by the participants.
+						</p>
+						<div class="flex space-x-3">
+							<button
+								class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+								data-event="DrawMics">
+								More
+							</button>
+							<a href="https://www.amity.edu/nspg/CARNIVALESQUE2025" target="_blank" rel="noopener"
+								class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">
+								Register
+							</a>
+							<button
+								class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+								data-event="DrawMics">
+								<i class="far fa-heart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event Card 6 -->
+				<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-date="1-May">
+					<div class="relative">
+						<img src="/assets/dance & folic.jpg" alt="Dance and frolics"
+							class="w-full h-auto object-contain bg-white" />
+						<div
+							class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0">
+						</div>
+					</div>
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">Dance & frolics</h3>
+						<p class="text-gray-600 mb-4">
+							A vibrant dance competition celebrating different rich cultures
+							from all over the globe. Ex: Kathak, salsa, jazz, Kathakali,
+							Bharatnatyam, hip-hop, etc.
+						</p>
+						<div class="flex space-x-3">
+							<button
+								class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
+								data-event="Dance">
+								More
+							</button>
+							<a href="https://www.amity.edu/nspg/CARNIVALESQUE2025" target="_blank" rel="noopener"
+								class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">
+								Register
+							</a>
+							<button
+								class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+								data-event="Dance">
+								<i class="far fa-heart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Event Card 7
 					<div
 						class="event-card bg-white rounded-lg shadow-lg overflow-hidden"
 						data-date="30-April"
 					>
 						<div class="relative">
 							<img
-								src="assets/quizard.jpg"
-								alt="QUIZZARD"
-								class="w-full h-auto object-contain bg-white"
-							/>
-							<div
-								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
-							></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-bold mb-2">Quizzard</h3>
-							<p class="text-gray-600 mb-4">
-								An exciting quiz competition based on language and literature.
-								Participants will be asked questions based on language,
-								literature, movies, series, dramas, etc.
-							</p>
-							<div class="flex space-x-3">
-								<button
-									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
-									data-event="Quizzarad"
-								>
-									More
-								</button>
-								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
-									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
-								>
-									Register
-								</a>
-								<button
-									class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-									data-event="Quizzarad"
-								>
-									<i class="far fa-heart"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Event Card 3 -->
-					<div
-						class="event-card bg-white rounded-lg shadow-lg overflow-hidden"
-						data-date="1-May"
-					>
-						<div class="relative">
-							<img
-								src="assets/concloset.jpg"
-								alt="Con-Closet"
-								class="w-full h-auto object-contain bg-white"
-							/>
-							<div
-								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
-							></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-bold mb-2">Con-Closet</h3>
-							<p class="text-gray-600 mb-4">
-								It is a cosplay contest where participants get to dress up as
-								their favorite characters inspired by the theme of the event.
-							</p>
-							<div class="flex space-x-3">
-								<button
-									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
-									data-event="ConCloset"
-								>
-									More
-								</button>
-								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
-									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
-								>
-									Register
-								</a>
-								<button
-									class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-									data-event="ConCloset"
-								>
-									<i class="far fa-heart"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Event Card 4 -->
-					<div
-						class="event-card bg-white rounded-lg shadow-lg overflow-hidden"
-						data-date="30-April"
-					>
-						<div class="relative">
-							<img
-								src="assets/battle of books.jpg"
-								alt="Battle of Books"
-								class="w-full h-auto object-contain bg-white"
-							/>
-							<div
-								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
-							></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-bold mb-2">Battle of Books</h3>
-							<p class="text-gray-600 mb-4">
-								Powerful and intellectual contest for debate where participants
-								get a chance to face off against fellow debaters on the topic
-								assigned for the event.
-							</p>
-							<div class="flex space-x-3">
-								<button
-									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
-									data-event="BattleofBooks"
-								>
-									More</button
-								>
-								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
-									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
-								>
-									Register
-								</a>
-								<button
-									class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-									data-event="BattleofBooks"
-								>
-									<i class="far fa-heart"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Event Card 5 -->
-					<div
-						class="event-card bg-white rounded-lg shadow-lg overflow-hidden"
-						data-date="30-April"
-					>
-						<div class="relative">
-							<img
-								src="assets/drawmics.jpg"
-								alt="DrawMics"
-								class="w-full h-auto object-contain bg-white"
-							/>
-							<div
-								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
-							></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-bold mb-2">Drawmics</h3>
-							<p class="text-gray-600 mb-4">
-								It is a mix of drawing and comics used to tell stories. A
-								creative comic strip drawing competition based on the themes
-								chosen by the participants.
-							</p>
-							<div class="flex space-x-3">
-								<button
-									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
-									data-event="DrawMics"
-								>
-									More
-								</button>
-								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
-									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
-								>
-									Register
-								</a>
-								<button
-									class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-									data-event="DrawMics"
-								>
-									<i class="far fa-heart"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Event Card 6 -->
-					<div
-						class="event-card bg-white rounded-lg shadow-lg overflow-hidden"
-						data-date="1-May"
-					>
-						<div class="relative">
-							<img
-								src="assets/dance & folic.jpg"
-								alt="Dance and frolics"
-								class="w-full h-auto object-contain bg-white"
-							/>
-							<div
-								class="event-card-overlay absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0"
-							></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-bold mb-2">Dance & frolics</h3>
-							<p class="text-gray-600 mb-4">
-								A vibrant dance competition celebrating different rich cultures
-								from all over the globe. Ex: Kathak, salsa, jazz, Kathakali,
-								Bharatnatyam, hip-hop, etc.
-							</p>
-							<div class="flex space-x-3">
-								<button
-									class="info-btn px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-600 transition"
-									data-event="Dance"
-								>
-									More
-								</button>
-								<a
-									href="https://www.amity.edu/nspg/CARNIVALESQUE2025"
-									target="_blank"
-									rel="noopener"
-									class="register-btn px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
-								>
-									Register
-								</a>
-								<button
-									class="favorite-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-									data-event="Dance"
-								>
-									<i class="far fa-heart"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- Event Card 7
-					<div
-						class="event-card bg-white rounded-lg shadow-lg overflow-hidden"
-						data-date="30-April"
-					>
-						<div class="relative">
-							<img
-								src="assets/pirates of litsvilla.jpg"
+								src="/assets/pirates of litsvilla.jpg"
 								alt="pirates of litsvilla"
 								class="w-full h-auto object-contain bg-white"
 							/>
@@ -561,11 +399,11 @@
 							</div>
 						</div>
 					</div> -->
-				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- Registration Off Modal
+	<!-- Registration Off Modal
 		<div
 			id="registration-off-modal"
 			class="fixed inset-0 flex items-center justify-center z-[200] bg-black bg-opacity-60 hidden"
@@ -590,714 +428,537 @@
 			</div>
 		</div> -->
 
-		<!-- Gallery section -->
-		<section id="gallery" class="gallery-section">
-			<h2
-				class="text-3xl font-bold underline mb-6 text-center"
-				style="color: rgb(255, 215, 0)"
-			>
-				Gallery
-			</h2>
-			<div class="swiper">
-				<div class="swiper-wrapper">
-					<!-- Slide 1 -->
-					<div class="swiper-slide">
-						<img src="assets/img (1).jpg" alt="Event 1" />
-					</div>
-					<!-- Slide 2 -->
-					<div class="swiper-slide">
-						<img src="assets/img (2).jpg" alt="Event 2" />
-					</div>
-					<!-- Slide 6 -->
-					<div class="swiper-slide">
-						<img src="assets/img (6).jpg" alt="Event 6" />
-					</div>
-					<!-- Slide 7 -->
-					<div class="swiper-slide">
-						<img src="assets/img (7).jpg" alt="Event 7" />
-					</div>
-					<!-- Slide 8 -->
-					<div class="swiper-slide">
-						<img src="assets/img (8).jpg" alt="Event 8" />
-					</div>
-					<!-- Slide 9 -->
-					<div class="swiper-slide">
-						<img src="assets/img (9).jpg" alt="Event 9" />
-					</div>
-					<!-- Slide 10 -->
-					<div class="swiper-slide">
-						<img src="assets/img (10).jpg" alt="Event 10" />
-					</div>
-					<!-- Slide 11 -->
-					<div class="swiper-slide">
-						<img src="assets/img (11).jpg" alt="Event 11" />
-					</div>
-					<!-- Slide 13 -->
-					<div class="swiper-slide">
-						<img src="assets/img (13).jpg" alt="Event 13" />
-					</div>
-					<!-- Slide 14 -->
-					<div class="swiper-slide">
-						<img src="assets/img (14).jpg" alt="Event 14" />
-					</div>
-					<!-- Slide 15 -->
-					<div class="swiper-slide">
-						<img src="assets/img (15).jpg" alt="Event 15" />
-					</div>
-					<!-- Slide 16 -->
-					<div class="swiper-slide">
-						<img src="assets/img (16).jpg" alt="Event 16" />
-					</div>
-					<!-- Slide 17 -->
-					<div class="swiper-slide">
-						<img src="assets/img (17).jpg" alt="Event 17" />
-					</div>
-					<!-- Slide 18 -->
-					<div class="swiper-slide">
-						<img src="assets/img (18).jpg" alt="Event 18" />
-					</div>
-					<!-- Slide 19 -->
-					<div class="swiper-slide">
-						<img src="assets/img (19).jpg" alt="Event 19" />
-					</div>
-					<!-- Slide 20 -->
-					<div class="swiper-slide">
-						<img src="assets/img (20).jpg" alt="Event 20" />
-					</div>
-					<!-- Slide 21 -->
-					<div class="swiper-slide">
-						<img src="assets/img (21).jpg" alt="Event 21" />
-					</div>
-					<!-- Slide 22 -->
-					<div class="swiper-slide">
-						<img src="assets/img (22).jpg" alt="Event 22" />
-					</div>
-					<!-- Slide 23 -->
-					<div class="swiper-slide">
-						<img src="assets/img (23).jpg" alt="Event 23" />
-					</div>
-					<!-- Slide 25 -->
-					<div class="swiper-slide">
-						<img src="assets/img (25).jpg" alt="Event 25" />
-					</div>
-					<!-- Slide 26 -->
-					<div class="swiper-slide">
-						<img src="assets/img (26).jpg" alt="Event 26" />
-					</div>
-					<!-- Slide 27 -->
-					<div class="swiper-slide">
-						<img src="assets/img (27).jpg" alt="Event 27" />
-					</div>
-					<!-- Slide 28 -->
-					<div class="swiper-slide">
-						<img src="assets/img (28).jpg" alt="Event 28" />
-					</div>
-					<!-- Slide 29 -->
-					<div class="swiper-slide">
-						<img src="assets/img (29).jpg" alt="Event 29" />
-					</div>
+	<!-- Gallery section -->
+	<section id="gallery" class="gallery-section">
+		<h2 class="text-3xl font-bold underline mb-6 text-center" style="color: rgb(255, 215, 0)">
+			Gallery
+		</h2>
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<!-- Slide 1 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (1).jpg" alt="Event 1" />
+				</div>
+				<!-- Slide 2 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (2).jpg" alt="Event 2" />
+				</div>
+				<!-- Slide 6 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (6).jpg" alt="Event 6" />
+				</div>
+				<!-- Slide 7 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (7).jpg" alt="Event 7" />
+				</div>
+				<!-- Slide 8 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (8).jpg" alt="Event 8" />
+				</div>
+				<!-- Slide 9 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (9).jpg" alt="Event 9" />
+				</div>
+				<!-- Slide 10 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (10).jpg" alt="Event 10" />
+				</div>
+				<!-- Slide 11 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (11).jpg" alt="Event 11" />
+				</div>
+				<!-- Slide 13 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (13).jpg" alt="Event 13" />
+				</div>
+				<!-- Slide 14 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (14).jpg" alt="Event 14" />
+				</div>
+				<!-- Slide 15 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (15).jpg" alt="Event 15" />
+				</div>
+				<!-- Slide 16 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (16).jpg" alt="Event 16" />
+				</div>
+				<!-- Slide 17 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (17).jpg" alt="Event 17" />
+				</div>
+				<!-- Slide 18 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (18).jpg" alt="Event 18" />
+				</div>
+				<!-- Slide 19 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (19).jpg" alt="Event 19" />
+				</div>
+				<!-- Slide 20 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (20).jpg" alt="Event 20" />
+				</div>
+				<!-- Slide 21 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (21).jpg" alt="Event 21" />
+				</div>
+				<!-- Slide 22 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (22).jpg" alt="Event 22" />
+				</div>
+				<!-- Slide 23 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (23).jpg" alt="Event 23" />
+				</div>
+				<!-- Slide 25 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (25).jpg" alt="Event 25" />
+				</div>
+				<!-- Slide 26 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (26).jpg" alt="Event 26" />
+				</div>
+				<!-- Slide 27 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (27).jpg" alt="Event 27" />
+				</div>
+				<!-- Slide 28 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (28).jpg" alt="Event 28" />
+				</div>
+				<!-- Slide 29 -->
+				<div class="swiper-slide">
+					<img src="/assets/img (29).jpg" alt="Event 29" />
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- About Section -->
-		<section id="about" class="py-20 bg-white">
-			<div class="container mx-auto px-4">
-				<h2 class="text-4xl font-bold text-center mb-12">About The Event</h2>
-				<div class="grid md:grid-cols-2 gap-12 items-center">
-					<div class="relative group">
-						<img
-							src="assets/img (10).jpg"
-							alt="Tech Conference"
-							class="rounded-lg shadow-xl transition-transform duration-300 group-hover:scale-105"
-						/>
-						<div
-							class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-						></div>
-					</div>
-					<div>
-						<h3 class="text-2xl font-bold mb-4">
-							Join Us for an Unforgettable Experience
-						</h3>
-						<p class="text-gray-600 mb-6">
-							Carnivalesque 4.0 is more than just an event – it’s a vibrant
-							celebration of literature, imagination, and the performing arts,
-							proudly hosted by the Amity Institute of English Studies and
-							Research, Amity University, Patna. Across two immersive days,
-							participants will have the opportunity to:
-						</p>
-						<ul class="space-y-4">
-							<li class="flex items-center">
-								<i class="fas fa-check-circle text-primary mr-3"></i>
-								<span
-									>Enter a world where words come alive and stories take
-									flight</span
-								>
-							</li>
-							<li class="flex items-center">
-								<i class="fas fa-check-circle text-primary mr-3"></i>
-								<span
-									>Participate in events like Echoes of Lingo, Quizzards,
-									Con-Closet, and Battle of Books</span
-								>
-							</li>
-							<li class="flex items-center">
-								<i class="fas fa-check-circle text-primary mr-3"></i>
-								<span
-									>Express creativity through visual storytelling in
-									Drawmics</span
-								>
-							</li>
-							<li class="flex items-center">
-								<i class="fas fa-check-circle text-primary mr-3"></i>
-								<span
-									>Showcase your talent and energy in Dance and Frolics</span
-								>
-							</li>
-							<li class="flex items-center">
-								<i class="fas fa-check-circle text-primary mr-3"></i>
-								<span
-									>Engage with passionate readers, writers, and performers from
-									diverse backgrounds</span
-								>
-							</li>
-							<p>
-								Whether you're a passionate page-turner, a fearless debater, a
-								vibrant performer, or a master of words—Carnivalesque 4.0 is
-								your stage. Let’s celebrate the boundless magic of language
-								together!
-							</p>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section
-			class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12 px-6"
-		>
-			<div class="max-w-6xl mx-auto">
-				<!-- Heading -->
-				<h2 id="contact" class="text-4xl font-bold text-center mb-8">
-					Contact Us
+	<!-- About Section -->
+	<section id="about" class="py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<h2 class="text-4xl font-bold text-center mb-12">About The Event</h2>
+			<div class="grid md:grid-cols-2 gap-12 items-center">
+				<div class="relative group">
+					<img src="/assets/img (10).jpg" alt="Tech Conference"
+						class="rounded-lg shadow-xl transition-transform duration-300 group-hover:scale-105" />
 					<div
-						class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto mt-2 rounded"
-					></div>
-				</h2>
+						class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+					</div>
+				</div>
+				<div>
+					<h3 class="text-2xl font-bold mb-4">
+						Join Us for an Unforgettable Experience
+					</h3>
+					<p class="text-gray-600 mb-6">
+						Carnivalesque 4.0 is more than just an event – it’s a vibrant
+						celebration of literature, imagination, and the performing arts,
+						proudly hosted by the Amity Institute of English Studies and
+						Research, Amity University, Patna. Across two immersive days,
+						participants will have the opportunity to:
+					</p>
+					<ul class="space-y-4">
+						<li class="flex items-center">
+							<i class="fas fa-check-circle text-primary mr-3"></i>
+							<span>Enter a world where words come alive and stories take
+								flight</span>
+						</li>
+						<li class="flex items-center">
+							<i class="fas fa-check-circle text-primary mr-3"></i>
+							<span>Participate in events like Echoes of Lingo, Quizzards,
+								Con-Closet, and Battle of Books</span>
+						</li>
+						<li class="flex items-center">
+							<i class="fas fa-check-circle text-primary mr-3"></i>
+							<span>Express creativity through visual storytelling in
+								Drawmics</span>
+						</li>
+						<li class="flex items-center">
+							<i class="fas fa-check-circle text-primary mr-3"></i>
+							<span>Showcase your talent and energy in Dance and Frolics</span>
+						</li>
+						<li class="flex items-center">
+							<i class="fas fa-check-circle text-primary mr-3"></i>
+							<span>Engage with passionate readers, writers, and performers from
+								diverse backgrounds</span>
+						</li>
+						<p>
+							Whether you're a passionate page-turner, a fearless debater, a
+							vibrant performer, or a master of words—Carnivalesque 4.0 is
+							your stage. Let’s celebrate the boundless magic of language
+							together!
+						</p>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 
-				<div class="grid md:grid-cols-2 gap-10">
-					<!-- Left: Contact Info -->
-					<div class="space-y-6">
-						<!-- Address -->
-						<div>
-							<div
-								class="flex items-center text-purple-700 font-semibold text-lg space-x-2"
-							>
-								<!-- Map Pin Icon -->
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-6 w-6 text-pink-500"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M12 11c1.1046 0 2-.8954 2-2s-.8954-2-2-2-2 .8954-2 2 .8954 2 2 2zm0 0c4 0 7 3 7 7v2H5v-2c0-4 3-7 7-7z"
-									/>
-								</svg>
-								<span>Address</span>
-							</div>
-							<p class="font-bold mt-1">Amity University, Patna</p>
-							<p>
-								Police Station, Bailey Rd, near Rupaspur, Kaliket Nagar, Patna,
-								Bihar 801503
-							</p>
+	<section class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12 px-6">
+		<div class="max-w-6xl mx-auto">
+			<!-- Heading -->
+			<h2 id="contact" class="text-4xl font-bold text-center mb-8">
+				Contact Us
+				<div class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto mt-2 rounded">
+				</div>
+			</h2>
+
+			<div class="grid md:grid-cols-2 gap-10">
+				<!-- Left: Contact Info -->
+				<div class="space-y-6">
+					<!-- Address -->
+					<div>
+						<div class="flex items-center text-purple-700 font-semibold text-lg space-x-2">
+							<!-- Map Pin Icon -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none"
+								viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="M12 11c1.1046 0 2-.8954 2-2s-.8954-2-2-2-2 .8954-2 2 .8954 2 2 2zm0 0c4 0 7 3 7 7v2H5v-2c0-4 3-7 7-7z" />
+							</svg>
+							<span>Address</span>
 						</div>
-						<!-- Responsive Google Map Embed -->
-						<div
-							class="map-container"
-							style="
+						<p class="font-bold mt-1">Amity University, Patna</p>
+						<p>
+							Police Station, Bailey Rd, near Rupaspur, Kaliket Nagar, Patna,
+							Bihar 801503
+						</p>
+					</div>
+					<!-- Responsive Google Map Embed -->
+					<div class="map-container" style="
 								width: 100%;
 								overflow: hidden;
 								position: relative;
 								padding-bottom: 56.25%;
 								margin-top: 20px;
-							"
-						>
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7774237685253!2d85.05206687510363!3d25.612311314762536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed56457e773c5d%3A0x26f4637f762e3747!2sAmity%20University%2C%20Patna!5e0!3m2!1sen!2sin!4v1743354109568!5m2!1sen!2sin"
-								style="
+							">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7774237685253!2d85.05206687510363!3d25.612311314762536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed56457e773c5d%3A0x26f4637f762e3747!2sAmity%20University%2C%20Patna!5e0!3m2!1sen!2sin!4v1743354109568!5m2!1sen!2sin"
+							style="
 									position: absolute;
 									top: 0;
 									left: 0;
 									width: 100%;
 									height: 100%;
 									border: 0;
-								"
-								allowfullscreen=""
-								loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"
-							></iframe>
+								" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+					<!-- Phone -->
+					<div>
+						<div class="flex items-center text-purple-700 font-semibold text-lg space-x-2">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none"
+								viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.22 3.64a1 1 0 01-.21.98l-2.26 2.26a11.05 11.05 0 005.49 5.49l2.26-2.26a1 1 0 01.98-.21l3.64 1.22a1 1 0 01.68.95V19a2 2 0 01-2 2h-1c-9.39 0-17-7.61-17-17V5z" />
+							</svg>
+							<span><big>Phone:</big><br />Event Head</span>
 						</div>
-						<!-- Phone -->
-						<div>
-							<div
-								class="flex items-center text-purple-700 font-semibold text-lg space-x-2"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-6 w-6 text-pink-500"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.22 3.64a1 1 0 01-.21.98l-2.26 2.26a11.05 11.05 0 005.49 5.49l2.26-2.26a1 1 0 01.98-.21l3.64 1.22a1 1 0 01.68.95V19a2 2 0 01-2 2h-1c-9.39 0-17-7.61-17-17V5z"
-									/>
-								</svg>
-								<span><big>Phone:</big><br />Event Head</span>
-							</div>
-							<p class="mt-1">+91 9471445205 <br />+91 8603915919</p>
-						</div>
+						<p class="mt-1">+91 9471445205 <br />+91 8603915919</p>
+					</div>
 
-						<!-- Email -->
-						<div>
-							<div
-								class="flex items-center text-purple-700 font-semibold text-lg space-x-2"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-6 w-6 text-pink-500"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M16 12l-4-4-4 4m8-4h-8a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-8a2 2 0 00-2-2z"
-									/>
-								</svg>
-								<span>Email</span>
-							</div>
+					<!-- Email -->
+					<div>
+						<div class="flex items-center text-purple-700 font-semibold text-lg space-x-2">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none"
+								viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="M16 12l-4-4-4 4m8-4h-8a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-8a2 2 0 00-2-2z" />
+							</svg>
+							<span>Email</span>
+						</div>
+						<p>
+							Email:
+							<a href="mailto:aiesr.ptn.amity@gmail.com"
+								class="text-blue- hover:underline">aiesr.ptn.amity@gmail.com</a>
+						</p>
+					</div>
+				</div>
+				<!-- Right: Message Form (optional placeholder) -->
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
+					<form action="https://formsubmit.co/vikashkelly2gmail.com" method="POST" class="space-y-4"
+						id="contactForm">
+						<input type="text" name="name" placeholder="Your Name" required
+							class="w-full border border-gray-300 rounded px-4 py-2" />
+						<input type="email" name="email" placeholder="Your Email" required
+							class="w-full border border-gray-300 rounded px-4 py-2" />
+						<input type="text" name="subject" placeholder="Subject" required
+							class="w-full border border-gray-300 rounded px-4 py-2" />
+						<textarea name="message" rows="4" placeholder="Your Message" required
+							class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+						<button type="submit"
+							class="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-6 py-2 rounded hover:scale-105 transition-transform duration-300">
+							Send Message
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sponsor section -->
+	<section id="sponsors" class="sponsors-section">
+		<div class="container">
+			<h2 class="section-title">Our Sponsors</h2>
+			<p class="section-description">
+				Thank you to our amazing sponsors who make this carnival possible!
+			</p>
+
+			<div class="sponsors-marquee-container">
+				<div class="sponsors-marquee">
+					<div class="sponsors-track">
+						<!-- Repeat these sponsor items in the track -->
+						<div class="sponsor-item">
+							<img src="/assets/sponsor1.jpg" alt="Brewmn Coffee" />
+							<p><b>Brewmn Coffee</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/Pro - Art Makeup WorkshopPro - Art Makeup Workshop.jpg"
+								alt="Pro - Art Makeup Workshop" />
 							<p>
-								Email:
-								<a
-									href="mailto:aiesr.ptn.amity@gmail.com"
-									class="text-blue- hover:underline"
-									>aiesr.ptn.amity@gmail.com</a
-								>
+								<b>Pro - Art Makeup</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							</p>
 						</div>
-					</div>
-					<!-- Right: Message Form (optional placeholder) -->
-					<div class="bg-white rounded-lg shadow-md p-6">
-						<h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
-						<form
-							action="https://formsubmit.co/vikashkelly2gmail.com"
-							method="POST"
-							class="space-y-4"
-							id="contactForm"
-						>
-							<input
-								type="text"
-								name="name"
-								placeholder="Your Name"
-								required
-								class="w-full border border-gray-300 rounded px-4 py-2"
-							/>
-							<input
-								type="email"
-								name="email"
-								placeholder="Your Email"
-								required
-								class="w-full border border-gray-300 rounded px-4 py-2"
-							/>
-							<input
-								type="text"
-								name="subject"
-								placeholder="Subject"
-								required
-								class="w-full border border-gray-300 rounded px-4 py-2"
-							/>
-							<textarea
-								name="message"
-								rows="4"
-								placeholder="Your Message"
-								required
-								class="w-full border border-gray-300 rounded px-4 py-2"
-							></textarea>
-							<button
-								type="submit"
-								class="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-6 py-2 rounded hover:scale-105 transition-transform duration-300"
-							>
-								Send Message
-							</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Sponsor section -->
-		<section id="sponsors" class="sponsors-section">
-			<div class="container">
-				<h2 class="section-title">Our Sponsors</h2>
-				<p class="section-description">
-					Thank you to our amazing sponsors who make this carnival possible!
-				</p>
-
-				<div class="sponsors-marquee-container">
-					<div class="sponsors-marquee">
-						<div class="sponsors-track">
-							<!-- Repeat these sponsor items in the track -->
-							<div class="sponsor-item">
-								<img src="assets/sponsor1.jpg" alt="Brewmn Coffee" />
-								<p><b>Brewmn Coffee</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img
-									src="assets/Pro - Art Makeup WorkshopPro - Art Makeup Workshop.jpg"
-									alt="Pro - Art Makeup Workshop"
-								/>
-								<p>
-									<b>Pro - Art Makeup</b
-									>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-									<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/Pizza wings.jpg" alt="Pizza Wings" />
-								<p><b>Pizza Wings</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/sponsor2.jpg" alt="Tao Bao" />
-								<p><b>Tao Bao</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/sponsor3.jpg" alt="Sky Cafe" />
-								<p><b>Sky Cafe</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-
-							<!-- Duplicate items for continuous scrolling effect -->
-							<div class="sponsor-item">
-								<img src="assets/sponsor1.jpg" alt="Brewmn Coffee" />
-								<p><b>Brewmn Coffee</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img
-									src="assets/Pro - Art Makeup WorkshopPro - Art Makeup Workshop.jpg"
-									alt="Pro - Art Makeup Workshop"
-								/>
-								<p>
-									<b>Pro - Art Makeup</b
-									>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-									<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/Pizza wings.jpg" alt="Pizza Wings" />
-								<p><b>Pizza Wings</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/sponsor2.jpg" alt="Tao Bao" />
-								<p><b>Tao Bao</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/sponsor3.jpg" alt="Sky Cafe" />
-								<p><b>Sky Cafe</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/sponsor1.jpg" alt="Brewmn Coffee" />
-								<p><b>Brewmn Coffee</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img
-									src="assets/Pro - Art Makeup WorkshopPro - Art Makeup Workshop.jpg"
-									alt="Pro - Art Makeup Workshop"
-								/>
-								<p>
-									<b>Pro - Art Makeup</b
-									>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-									<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/Pizza wings.jpg" alt="Pizza Wings" />
-								<p><b>Pizza Wings</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/sponsor2.jpg" alt="Tao Bao" />
-								<p><b>Tao Bao</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
-							<div class="sponsor-item">
-								<img src="assets/sponsor3.jpg" alt="Sky Cafe" />
-								<p><b>Sky Cafe</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-							</div>
+						<div class="sponsor-item">
+							<img src="/assets/Pizza wings.jpg" alt="Pizza Wings" />
+							<p><b>Pizza Wings</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Media Partner -->
-		<section id="media-partner" class="media-partner-section py-12 bg-gray-100">
-			<div class="container mx-auto px-4">
-				<h2 class="text-3xl font-bold text-center mb-6">Media Partner</h2>
-				<p class="text-center text-gray-600 mb-8">
-					Thank you to our amazing Media Partner who makes this carnival
-					possible!
-				</p>
-				<div class="flex justify-center">
-					<img
-						src="assets/Asian Times.jpg"
-						alt="Asian Times"
-						class="max-w-full h-auto rounded-lg shadow-lg"
-					/>
-				</div>
-			</div>
-		</section>
-		<footer class="bg-gray-900 text-white py-10">
-			<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-				<!-- Quick Links -->
-				<div>
-					<h3 class="text-lg font-semibold text-yellow-400 mb-4">
-						Quick Links
-					</h3>
-					<ul class="space-y-2">
-						<li><a href="#home" class="hover:text-yellow-300">Home</a></li>
-						<li><a href="#events" class="hover:text-yellow-300">Events</a></li>
-						<li>
-							<a href="#gallery" class="hover:text-yellow-300">Gallery</a>
-						</li>
-						<li><a href="#about" class="hover:text-yellow-300">About</a></li>
-						<li>
-							<a href="#contact" class="hover:text-yellow-300">Contact</a>
-						</li>
-					</ul>
-				</div>
-
-				<!-- Contact Information -->
-				<div>
-					<h3 class="text-lg font-semibold text-yellow-400 mb-4">Contact Us</h3>
-					<p><b>Amity University, Patna</b></p>
-					<p>
-						Police Station, Bailey Rd, near Rupaspur, Kaliket Nagar, Patna,
-						Bihar 801503
-					</p>
-					<p>Phone: +91 8340109368, +91 7209746518</p>
-					<p>
-						Email:
-						<a
-							href="mailto:aiesr.ptn.amity@gmail.com"
-							class="text-yellow-300 hover:underline"
-							>aiesr.ptn.amity@gmail.com</a
-						>
-					</p>
-				</div>
-
-				<!-- Meet the Developer -->
-				<div class="text-center md:text-left">
-					<h3 class="text-lg font-semibold text-yellow-400 mb-4">
-						Carnivalesque Tech Team
-					</h3>
-					<div
-						class="flex items-center justify-center md:justify-start space-x-4 mb-6"
-					>
-						<img
-							src="assets/vikash.png"
-							alt="Vikash Kumar"
-							class="w-16 h-16 rounded-full border-2 border-yellow-400"
-						/>
-						<div>
-							<p class="font-semibold">Vikash Kumar</p>
-							<p class="text-sm">Developer</p>
-							<div>
-								<div class="flex space-x-4 mt-3">
-									<!-- GitHub -->
-									<a
-										href="https://github.com/CypherNinjaa"
-										target="_blank"
-										class="text-white hover:text-blue-400"
-									>
-										<svg
-											class="w-6 h-6"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												fill-rule="evenodd"
-												d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.52 1.05 1.52 1.05.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 .1-2.7 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85.01 1.71.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.49 1.24.2 2.14.1 2.7.62.68 1 1.57 1 2.63 0 3.84-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .26.16.58.68.48A10.005 10.005 0 0022 12c0-5.52-4.48-10-10-10z"
-												clip-rule="evenodd"
-											/>
-										</svg>
-									</a>
-
-									<!-- Instagram -->
-									<a
-										href="https://instagram.com/vikashintech.py"
-										target="_blank"
-										class="text-white hover:text-pink-400"
-									>
-										<svg
-											class="w-6 h-6"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z"
-											/>
-										</svg>
-									</a>
-
-									<!-- LinkedIn -->
-									<a
-										href="https://linkedin.com/in/vikash-kumar-b42052329/"
-										target="_blank"
-										class="text-white hover:text-blue-500"
-									>
-										<svg
-											class="w-6 h-6"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M4.98 3.5C3.33 3.5 2 4.83 2 6.48c0 1.64 1.33 2.98 2.98 2.98 1.65 0 2.98-1.34 2.98-2.98C7.96 4.83 6.63 3.5 4.98 3.5zM2.4 21.5h5.15V9H2.4v12.5zM9.66 9h4.93v1.71h.07c.69-1.31 2.38-2.69 4.91-2.69 5.25 0 6.22 3.45 6.22 7.93V21.5h-5.15v-6.65c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V21.5h-5.15V9z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</div>
+						<div class="sponsor-item">
+							<img src="/assets/sponsor2.jpg" alt="Tao Bao" />
+							<p><b>Tao Bao</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 						</div>
-					</div>
-
-					<!-- Second Developer -->
-					<div
-						class="flex items-center justify-center md:justify-start space-x-4"
-					>
-						<img
-							src="assets/amanverma.jpg"
-							alt="Rahul Sharma"
-							class="w-16 h-16 rounded-full border-2 border-yellow-400"
-						/>
-						<div>
-							<p class="font-semibold">Aman Verma</p>
-							<p class="text-sm">Developer</p>
-							<div>
-								<div class="flex space-x-4 mt-3">
-									<!-- GitHub -->
-									<a
-										href="https://github.com/amanver02"
-										target="_blank"
-										class="text-white hover:text-blue-400"
-									>
-										<svg
-											class="w-6 h-6"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												fill-rule="evenodd"
-												d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.52 1.05 1.52 1.05.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 .1-2.7 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85.01 1.71.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.49 1.24.2 2.14.1 2.7.62.68 1 1.57 1 2.63 0 3.84-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .26.16.58.68.48A10.005 10.005 0 0022 12c0-5.52-4.48-10-10-10z"
-												clip-rule="evenodd"
-											/>
-										</svg>
-									</a>
-
-									<!-- Instagram -->
-									<a
-										href="https://www.instagram.com/aman.verma055/"
-										target="_blank"
-										class="text-white hover:text-pink-400"
-									>
-										<svg
-											class="w-6 h-6"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z"
-											/>
-										</svg>
-									</a>
-
-									<!-- LinkedIn -->
-									<a
-										href="https://www.linkedin.com/in/aman-verma-05b6312a4/"
-										target="_blank"
-										class="text-white hover:text-blue-500"
-									>
-										<svg
-											class="w-6 h-6"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M4.98 3.5C3.33 3.5 2 4.83 2 6.48c0 1.64 1.33 2.98 2.98 2.98 1.65 0 2.98-1.34 2.98-2.98C7.96 4.83 6.63 3.5 4.98 3.5zM2.4 21.5h5.15V9H2.4v12.5zM9.66 9h4.93v1.71h.07c.69-1.31 2.38-2.69 4.91-2.69 5.25 0 6.22 3.45 6.22 7.93V21.5h-5.15v-6.65c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V21.5h-5.15V9z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</div>
+						<div class="sponsor-item">
+							<img src="/assets/sponsor3.jpg" alt="Sky Cafe" />
+							<p><b>Sky Cafe</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="mt-8 text-center text-gray-400 text-sm">
-				© 2025 CARNIVALESQUE 4.0. All rights reserved.
-			</div>
-		</footer>
 
-		<!-- Event Info Modal -->
-		<div
-			id="event-modal"
-			class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
-		>
-			<div
-				class="bg-white rounded-lg max-w-md w-full mx-4 relative flex flex-col max-h-[90vh]"
-			>
-				<!-- Fixed header -->
-				<div class="p-6 border-b border-gray-200">
-					<button
-						id="close-modal"
-						class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-					>
-						<i class="fas fa-times text-xl"></i>
-					</button>
-					<h3 id="modal-title" class="text-2xl font-bold pr-8">
-						Event Informations
-					</h3>
-				</div>
-
-				<!-- Scrollable content -->
-				<div
-					id="modal-content"
-					class="p-6 overflow-y-auto text-gray-600 flex-grow"
-				>
-					<!-- Content will be populated dynamically -->
-				</div>
-
-				<!-- Fixed footer with button -->
-				<div class="p-6 border-t border-gray-200">
-					<div class="flex justify-end">
-						<button
-							id="modal-register"
-							class="px-6 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition"
-						>
-							Register Now
-						</button>
+						<!-- Duplicate items for continuous scrolling effect -->
+						<div class="sponsor-item">
+							<img src="/assets/sponsor1.jpg" alt="Brewmn Coffee" />
+							<p><b>Brewmn Coffee</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/Pro - Art Makeup WorkshopPro - Art Makeup Workshop.jpg"
+								alt="Pro - Art Makeup Workshop" />
+							<p>
+								<b>Pro - Art Makeup</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/Pizza wings.jpg" alt="Pizza Wings" />
+							<p><b>Pizza Wings</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/sponsor2.jpg" alt="Tao Bao" />
+							<p><b>Tao Bao</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/sponsor3.jpg" alt="Sky Cafe" />
+							<p><b>Sky Cafe</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/sponsor1.jpg" alt="Brewmn Coffee" />
+							<p><b>Brewmn Coffee</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/Pro - Art Makeup WorkshopPro - Art Makeup Workshop.jpg"
+								alt="Pro - Art Makeup Workshop" />
+							<p>
+								<b>Pro - Art Makeup</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								<b>Workshop</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/Pizza wings.jpg" alt="Pizza Wings" />
+							<p><b>Pizza Wings</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/sponsor2.jpg" alt="Tao Bao" />
+							<p><b>Tao Bao</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+						<div class="sponsor-item">
+							<img src="/assets/sponsor3.jpg" alt="Sky Cafe" />
+							<p><b>Sky Cafe</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Announcement Popup Modal -->
-		<!-- <divx
+	</section>
+	<!-- Media Partner -->
+	<section id="media-partner" class="media-partner-section py-12 bg-gray-100">
+		<div class="container mx-auto px-4">
+			<h2 class="text-3xl font-bold text-center mb-6">Media Partner</h2>
+			<p class="text-center text-gray-600 mb-8">
+				Thank you to our amazing Media Partner who makes this carnival
+				possible!
+			</p>
+			<div class="flex justify-center">
+				<img src="/assets/Asian Times.jpg" alt="Asian Times" class="max-w-full h-auto rounded-lg shadow-lg" />
+			</div>
+		</div>
+	</section>
+	<footer class="bg-gray-900 text-white py-10">
+		<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+			<!-- Quick Links -->
+			<div>
+				<h3 class="text-lg font-semibold text-yellow-400 mb-4">
+					Quick Links
+				</h3>
+				<ul class="space-y-2">
+					<li><a href="#home" class="hover:text-yellow-300">Home</a></li>
+					<li><a href="#events" class="hover:text-yellow-300">Events</a></li>
+					<li>
+						<a href="#gallery" class="hover:text-yellow-300">Gallery</a>
+					</li>
+					<li><a href="#about" class="hover:text-yellow-300">About</a></li>
+					<li>
+						<a href="#contact" class="hover:text-yellow-300">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Contact Information -->
+			<div>
+				<h3 class="text-lg font-semibold text-yellow-400 mb-4">Contact Us</h3>
+				<p><b>Amity University, Patna</b></p>
+				<p>
+					Police Station, Bailey Rd, near Rupaspur, Kaliket Nagar, Patna,
+					Bihar 801503
+				</p>
+				<p>Phone: +91 8340109368, +91 7209746518</p>
+				<p>
+					Email:
+					<a href="mailto:aiesr.ptn.amity@gmail.com"
+						class="text-yellow-300 hover:underline">aiesr.ptn.amity@gmail.com</a>
+				</p>
+			</div>
+
+			<!-- Meet the Developer -->
+			<div class="text-center md:text-left">
+				<h3 class="text-lg font-semibold text-yellow-400 mb-4">
+					Carnivalesque Tech Team
+				</h3>
+				<div class="flex items-center justify-center md:justify-start space-x-4 mb-6">
+					<img src="/assets/vikash.png" alt="Vikash Kumar"
+						class="w-16 h-16 rounded-full border-2 border-yellow-400" />
+					<div>
+						<p class="font-semibold">Vikash Kumar</p>
+						<p class="text-sm">Developer</p>
+						<div>
+							<div class="flex space-x-4 mt-3">
+								<!-- GitHub -->
+								<a href="https://github.com/CypherNinjaa" target="_blank"
+									class="text-white hover:text-blue-400">
+									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+										<path fill-rule="evenodd"
+											d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.52 1.05 1.52 1.05.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 .1-2.7 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85.01 1.71.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.49 1.24.2 2.14.1 2.7.62.68 1 1.57 1 2.63 0 3.84-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .26.16.58.68.48A10.005 10.005 0 0022 12c0-5.52-4.48-10-10-10z"
+											clip-rule="evenodd" />
+									</svg>
+								</a>
+
+								<!-- Instagram -->
+								<a href="https://instagram.com/vikashintech.py" target="_blank"
+									class="text-white hover:text-pink-400">
+									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z" />
+									</svg>
+								</a>
+
+								<!-- LinkedIn -->
+								<a href="https://linkedin.com/in/vikash-kumar-b42052329/" target="_blank"
+									class="text-white hover:text-blue-500">
+									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M4.98 3.5C3.33 3.5 2 4.83 2 6.48c0 1.64 1.33 2.98 2.98 2.98 1.65 0 2.98-1.34 2.98-2.98C7.96 4.83 6.63 3.5 4.98 3.5zM2.4 21.5h5.15V9H2.4v12.5zM9.66 9h4.93v1.71h.07c.69-1.31 2.38-2.69 4.91-2.69 5.25 0 6.22 3.45 6.22 7.93V21.5h-5.15v-6.65c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V21.5h-5.15V9z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Second Developer -->
+				<div class="flex items-center justify-center md:justify-start space-x-4">
+					<img src="/assets/amanverma.jpg" alt="Rahul Sharma"
+						class="w-16 h-16 rounded-full border-2 border-yellow-400" />
+					<div>
+						<p class="font-semibold">Aman Verma</p>
+						<p class="text-sm">Developer</p>
+						<div>
+							<div class="flex space-x-4 mt-3">
+								<!-- GitHub -->
+								<a href="https://github.com/amanver02" target="_blank"
+									class="text-white hover:text-blue-400">
+									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+										<path fill-rule="evenodd"
+											d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.52 1.05 1.52 1.05.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 .1-2.7 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85.01 1.71.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.49 1.24.2 2.14.1 2.7.62.68 1 1.57 1 2.63 0 3.84-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .26.16.58.68.48A10.005 10.005 0 0022 12c0-5.52-4.48-10-10-10z"
+											clip-rule="evenodd" />
+									</svg>
+								</a>
+
+								<!-- Instagram -->
+								<a href="https://www.instagram.com/aman.verma055/" target="_blank"
+									class="text-white hover:text-pink-400">
+									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z" />
+									</svg>
+								</a>
+
+								<!-- LinkedIn -->
+								<a href="https://www.linkedin.com/in/aman-verma-05b6312a4/" target="_blank"
+									class="text-white hover:text-blue-500">
+									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M4.98 3.5C3.33 3.5 2 4.83 2 6.48c0 1.64 1.33 2.98 2.98 2.98 1.65 0 2.98-1.34 2.98-2.98C7.96 4.83 6.63 3.5 4.98 3.5zM2.4 21.5h5.15V9H2.4v12.5zM9.66 9h4.93v1.71h.07c.69-1.31 2.38-2.69 4.91-2.69 5.25 0 6.22 3.45 6.22 7.93V21.5h-5.15v-6.65c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V21.5h-5.15V9z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mt-8 text-center text-gray-400 text-sm">
+			© 2025 CARNIVALESQUE 4.0. All rights reserved.
+		</div>
+	</footer>
+
+	<!-- Event Info Modal -->
+	<div id="event-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+		<div class="bg-white rounded-lg max-w-md w-full mx-4 relative flex flex-col max-h-[90vh]">
+			<!-- Fixed header -->
+			<div class="p-6 border-b border-gray-200">
+				<button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+					<i class="fas fa-times text-xl"></i>
+				</button>
+				<h3 id="modal-title" class="text-2xl font-bold pr-8">
+					Event Informations
+				</h3>
+			</div>
+
+			<!-- Scrollable content -->
+			<div id="modal-content" class="p-6 overflow-y-auto text-gray-600 flex-grow">
+				<!-- Content will be populated dynamically -->
+			</div>
+
+			<!-- Fixed footer with button -->
+			<div class="p-6 border-t border-gray-200">
+				<div class="flex justify-end">
+					<button id="modal-register"
+						class="px-6 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">
+						Register Now
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Announcement Popup Modal -->
+	<!-- <divx
 			id="announcement-popup"
 			class="fixed inset-0 flex items-center justify-center z-[100] bg-black bg-opacity-60 hidden"
 		>
@@ -1354,8 +1015,8 @@
 				</button>
 			</div>
 		</div> -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<!-- <script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- <script>
 			// Announcement Popup Logic
 			(function () {
 				const popup = document.getElementById("announcement-popup");
@@ -1417,5 +1078,6 @@
 				})();
 			})();
 		</script> -->
-	</body>
+</body>
+
 </html>
