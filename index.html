@@ -402,32 +402,6 @@
 			</div>
 		</div>
 	</section>
-
-	<!-- Registration Off Modal
-		<div
-			id="registration-off-modal"
-			class="fixed inset-0 flex items-center justify-center z-[200] bg-black bg-opacity-60 hidden"
-		>
-			<div
-				class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 p-8 relative border-4 border-red-500"
-			>
-				<button
-					id="registration-off-close"
-					class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-2xl font-bold"
-					aria-label="Close"
-				>
-					&times;
-				</button>
-				<div class="mb-4 flex items-center gap-3">
-					<i class="fas fa-ban text-red-600 text-3xl"></i>
-					<h2 class="text-2xl font-bold text-red-700">Registration Off</h2>
-				</div>
-				<div class="text-gray-800 mb-6" id="registration-off-message">
-					Registration is currently closed for this event.
-				</div>
-			</div>
-		</div> -->
-
 	<!-- Gallery section -->
 	<section id="gallery" class="gallery-section">
 		<h2 class="text-3xl font-bold underline mb-6 text-center" style="color: rgb(255, 215, 0)">
@@ -562,26 +536,26 @@
 						<li class="flex items-center">
 							<i class="fas fa-check-circle text-primary mr-3"></i>
 							<span>Enter a world where words come alive and stories take
-								flight</span>
+								flight.</span>
 						</li>
 						<li class="flex items-center">
 							<i class="fas fa-check-circle text-primary mr-3"></i>
-							<span>Participate in events like Echoes of Lingo, Quizzards,
-								Con-Closet, and Battle of Books</span>
+							<span>Participate in events like Rhythm & Echoes, Quizzards,
+								Con-Closet, and Battle of Books.</span>
 						</li>
 						<li class="flex items-center">
 							<i class="fas fa-check-circle text-primary mr-3"></i>
 							<span>Express creativity through visual storytelling in
-								Drawmics</span>
+								Drawmics.</span>
 						</li>
 						<li class="flex items-center">
 							<i class="fas fa-check-circle text-primary mr-3"></i>
-							<span>Showcase your talent and energy in Dance and Frolics</span>
+							<span>Showcase your talent and energy in Dance and Frolics.</span>
 						</li>
 						<li class="flex items-center">
 							<i class="fas fa-check-circle text-primary mr-3"></i>
 							<span>Engage with passionate readers, writers, and performers from
-								diverse backgrounds</span>
+								diverse backgrounds.</span>
 						</li>
 						<p>
 							Whether you're a passionate page-turner, a fearless debater, a
@@ -620,7 +594,7 @@
 						</div>
 						<p class="font-bold mt-1">Amity University, Patna</p>
 						<p>
-							Police Station, Bailey Rd, near Rupaspur, Kaliket Nagar, Patna,
+							Rupaspur Police Station, Bailey Rd, Kaliket Nagar, Patna,
 							Bihar 801503
 						</p>
 					</div>
@@ -825,7 +799,7 @@
 				<h3 class="text-lg font-semibold text-yellow-400 mb-4">Contact Us</h3>
 				<p><b>Amity University, Patna</b></p>
 				<p>
-					Police Station, Bailey Rd, near Rupaspur, Kaliket Nagar, Patna,
+					Rupaspur Police Station, Bailey Rd, Kaliket Nagar, Patna,
 					Bihar 801503
 				</p>
 				<p>Phone: +91 8340109368, +91 7209746518</p>
@@ -957,127 +931,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Announcement Popup Modal -->
-	<!-- <divx
-			id="announcement-popup"
-			class="fixed inset-0 flex items-center justify-center z-[100] bg-black bg-opacity-60 hidden"
-		>
-			<div
-				class="bg-white rounded-xl shadow-2xl max-w-lg w-full mx-4 p-4 sm:p-8 relative border-4 border-blue-500"
-			>
-				<button
-					id="announcement-close"
-					class="absolute top-4 right-4 text-gray-500 hover:text-blue-600 text-2xl font-bold"
-					aria-label="Close"
-				>
-					&times;
-				</button>
-				<div class="mb-4">
-					<h2 class="text-2xl font-bold text-red-700">
-						Important Announcement
-					</h2>
-				</div>
-				<div class="text-gray-800 mb-6 space-y-3">
-					<p>
-						Due to unavoidable circumstances, the event has been postponed. The
-						rescheduled date will be communicated to you within the next 48
-						hours.
-					</p>
-					<p>
-						Please note that your registrations and participation fee remain
-						valid and secure. We appreciate your understanding and continued
-						support.
-					</p>
-					<p>
-						Stay tuned for further updates.<br />
-						<span class="font-semibold text-gray-700"
-							>– Organizing Team, Carnivalesque 4.0<br />Amity Institute of
-							English Studies and Research<br />Amity University Patna</span
-						>
-					</p>
-				</div>
-				<div class="flex items-center space-x-3">
-					<input
-						type="checkbox"
-						id="dont-show-checkbox"
-						class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-					/>
-					<label for="dont-show-checkbox" class="text-gray-700"
-						>Do not show again today</label
-					>
-				</div>
-				<button
-					id="announcement-dontshow"
-					class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
-					disabled
-				>
-					Confirm
-				</button>
-			</div>
-		</div> -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<!-- <script>
-			// Announcement Popup Logic
-			(function () {
-				const popup = document.getElementById("announcement-popup");
-				const closeBtn = document.getElementById("announcement-close");
-				const dontShowBtn = document.getElementById("announcement-dontshow");
-				const LS_KEY = "hideAnnouncementPopup";
-
-				function showPopup() {
-					if (!localStorage.getItem(LS_KEY)) {
-						popup.classList.remove("hidden");
-					}
-				}
-				function hidePopup() {
-					popup.classList.add("hidden");
-				}
-				closeBtn.addEventListener("click", hidePopup);
-				dontShowBtn.addEventListener("click", function () {
-					localStorage.setItem(LS_KEY, "1");
-					hidePopup();
-				});
-				window.addEventListener("DOMContentLoaded", showPopup);
-			})();
-
-			// Registration Off Modal Logic
-			(function () {
-				const modal = document.getElementById("registration-off-modal");
-				const closeBtn = document.getElementById("registration-off-close");
-				const msg = document.getElementById("registration-off-message");
-				document.querySelectorAll("a[data-registration-off]").forEach((btn) => {
-					btn.addEventListener("click", function (e) {
-						e.preventDefault();
-						const eventName = btn.getAttribute("data-registration-off");
-						let displayName = eventName;
-						if (eventName === "rhythm and echoes")
-							displayName = "Rhythm and Echoes";
-						if (eventName === "ConCloset") displayName = "ConCloset";
-						if (eventName === "Dance and Frolics")
-							displayName = "Dance and Frolics";
-						if (eventName === "Quizzard") displayName = "Quizzard";
-						if (eventName === "Drawmics") displayName = "Drawmics";
-						if (eventName === "Battle of Books")
-							displayName = "Battle of Books";
-						msg.textContent = `Registration is currently off for: ${displayName}`;
-						modal.classList.remove("hidden");
-					});
-				});
-				closeBtn.addEventListener("click", function () {
-					modal.classList.add("hidden");
-				});
-				// Enable Confirm button when checkbox is checked
-				(function () {
-					const checkbox = document.getElementById("dont-show-checkbox");
-					const confirmBtn = document.getElementById("announcement-dontshow");
-					if (checkbox && confirmBtn) {
-						checkbox.addEventListener("change", function () {
-							confirmBtn.disabled = !checkbox.checked;
-						});
-					}
-				})();
-			})();
-		</script> -->
 </body>
 
 </html>
