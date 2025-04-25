@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Countdown Script
-const eventDate = new Date("2025-04-25T00:00:00").getTime();
+const eventDate = new Date("2025-04-30T00:00:00").getTime();
 
 const timer = setInterval(function () {
 	const now = new Date().getTime();
