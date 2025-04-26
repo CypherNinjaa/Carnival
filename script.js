@@ -42,6 +42,11 @@ const eventInfo = {
 		content: `<a target="_blank"
 									rel="noopener" href="https://drive.google.com/file/d/1Sb2CKC8gVFH_m11bVrB5PqRoCc_ibfue/view?usp=sharing;" download><b>Download Now</b></a>`,
 	},
+	Pirates: {
+		title: "Pirates of litsvilla",
+		content: `<a target="_blank"
+									rel="noopener" href="#" download><b>Download Now</b></a>`,
+	},
 };
 
 // Typing effect function
