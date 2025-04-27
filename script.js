@@ -45,7 +45,7 @@ const eventInfo = {
 	Pirates: {
 		title: "Pirates of litsvilla",
 		content: `<a target="_blank"
-									rel="noopener" href="#" download><b>Download Now</b></a>`,
+									rel="noopener" href="https://drive.google.com/file/d/1eXBGAMU5M_WiBnYOFHSTl6VbMDg1Masn/view?usp=sharing" download><b>Download Now</b></a>`,
 	},
 };
 
