@@ -1,7 +1,13 @@
 body {
 	font-family: "Libre Baskerville", serif;
 }
-h1, h2, h3, h4, h5, h6, .nav-link {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav-link {
 	font-family: "Playfair Display", serif;
 }
 .hero-gradient {
@@ -504,4 +510,52 @@ h1, h2, h3, h4, h5, h6, .nav-link {
 	height: 8px;
 	background-color: #ef4444;
 	border-radius: 50%;
+}
+
+/* Skeleton Loader Styles */
+.skeleton {
+	background-color: #e5e7eb;
+	border-radius: 6px;
+	position: relative;
+	overflow: hidden;
+}
+.skeleton::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -150px;
+	height: 100%;
+	width: 150px;
+	background: linear-gradient(90deg, transparent, #f3f4f6 60%, transparent);
+	animation: skeleton-loading 1.2s infinite;
+}
+@keyframes skeleton-loading {
+	0% {
+		left: -150px;
+	}
+	100% {
+		left: 100%;
+	}
+}
+.skeleton-text {
+	height: 18px;
+	width: 80%;
+	margin: 8px 0;
+}
+.skeleton-title {
+	height: 28px;
+	width: 60%;
+	margin: 12px 0;
+}
+.skeleton-img {
+	height: 180px;
+	width: 100%;
+	margin-bottom: 12px;
+}
+.skeleton-btn {
+	height: 36px;
+	width: 80px;
+	margin-right: 10px;
+	display: inline-block;
 }

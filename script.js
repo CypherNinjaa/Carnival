@@ -10,6 +10,36 @@ tailwind.config = {
 	},
 };
 
+// Skeleton loading logic
+document.addEventListener("DOMContentLoaded", function () {
+	// Show skeletons, hide real content initially
+	const eventsSkeletons = document.getElementById("events-skeletons");
+	const eventsReal = document.getElementById("events-real-content");
+	const gallerySkeletons = document.getElementById("gallery-skeletons");
+	const galleryReal = document.getElementById("gallery-real-content");
+
+	if (eventsSkeletons && eventsReal) {
+		eventsSkeletons.style.display = "grid";
+		eventsReal.style.display = "none";
+	}
+	if (gallerySkeletons && galleryReal) {
+		gallerySkeletons.style.display = "block";
+		galleryReal.style.display = "none";
+	}
+
+	// Simulate loading (replace with real data loading if needed)
+	setTimeout(() => {
+		if (eventsSkeletons && eventsReal) {
+			eventsSkeletons.style.display = "none";
+			eventsReal.style.display = "grid";
+		}
+		if (gallerySkeletons && galleryReal) {
+			gallerySkeletons.style.display = "none";
+			galleryReal.style.display = "block";
+		}
+	}, 2500); // 2.5s skeleton loading
+});
+
 // Event information for popup
 const eventInfo = {
 	Echoes: {
@@ -119,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Mobile menu toggle
 	const menuToggle = document.getElementById("menu-toggle");
 	const mobileMenu = document.getElementById("mobile-menu");
-	
+
 	menuToggle.addEventListener("click", () => {
 		mobileMenu.classList.toggle("hidden");
 	});

@@ -151,7 +151,72 @@
 	<section id="events" class="py-20 bg-gray-100">
 		<div class="container mx-auto px-4">
 			<h2 class="text-4xl font-bold text-center mb-12">Featured Events</h2>
-			<div class="grid md:grid-cols-3 gap-8">
+			<!-- Skeletons for event cards -->
+			<div id="events-skeletons" class="grid md:grid-cols-3 gap-8">
+				<!-- Repeat 6 skeleton cards -->
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<div class="skeleton skeleton-img"></div>
+					<div class="skeleton skeleton-title"></div>
+					<div class="skeleton skeleton-text"></div>
+					<div class="skeleton skeleton-text" style="width: 50%"></div>
+					<div style="margin-top:16px;">
+						<span class="skeleton skeleton-btn"></span>
+						<span class="skeleton skeleton-btn"></span>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<div class="skeleton skeleton-img"></div>
+					<div class="skeleton skeleton-title"></div>
+					<div class="skeleton skeleton-text"></div>
+					<div class="skeleton skeleton-text" style="width: 50%"></div>
+					<div style="margin-top:16px;">
+						<span class="skeleton skeleton-btn"></span>
+						<span class="skeleton skeleton-btn"></span>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<div class="skeleton skeleton-img"></div>
+					<div class="skeleton skeleton-title"></div>
+					<div class="skeleton skeleton-text"></div>
+					<div class="skeleton skeleton-text" style="width: 50%"></div>
+					<div style="margin-top:16px;">
+						<span class="skeleton skeleton-btn"></span>
+						<span class="skeleton skeleton-btn"></span>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<div class="skeleton skeleton-img"></div>
+					<div class="skeleton skeleton-title"></div>
+					<div class="skeleton skeleton-text"></div>
+					<div class="skeleton skeleton-text" style="width: 50%"></div>
+					<div style="margin-top:16px;">
+						<span class="skeleton skeleton-btn"></span>
+						<span class="skeleton skeleton-btn"></span>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<div class="skeleton skeleton-img"></div>
+					<div class="skeleton skeleton-title"></div>
+					<div class="skeleton skeleton-text"></div>
+					<div class="skeleton skeleton-text" style="width: 50%"></div>
+					<div style="margin-top:16px;">
+						<span class="skeleton skeleton-btn"></span>
+						<span class="skeleton skeleton-btn"></span>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<div class="skeleton skeleton-img"></div>
+					<div class="skeleton skeleton-title"></div>
+					<div class="skeleton skeleton-text"></div>
+					<div class="skeleton skeleton-text" style="width: 50%"></div>
+					<div style="margin-top:16px;">
+						<span class="skeleton skeleton-btn"></span>
+						<span class="skeleton skeleton-btn"></span>
+					</div>
+				</div>
+			</div>
+			<!-- Real event cards content -->
+			<div id="events-real-content" class="grid md:grid-cols-3 gap-8" style="display:none;">
 				<!-- Prize Section as Grid Item -->
 				<div
 					class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-stretch border border-green-100 md:col-span-2">
@@ -446,103 +511,120 @@
 		<h2 class="text-3xl font-bold underline mb-6 text-center" style="color: rgb(255, 215, 0)">
 			Gallery
 		</h2>
-		<div class="swiper">
+		<!-- Skeletons for gallery -->
+		<div id="gallery-skeletons" class="swiper">
 			<div class="swiper-wrapper">
-				<!-- Slide 1 -->
 				<div class="swiper-slide">
-					<img src="/assets/img (1).jpg" alt="Event 1" />
+					<div class="skeleton skeleton-img" style="height:220px;"></div>
 				</div>
-				<!-- Slide 2 -->
 				<div class="swiper-slide">
-					<img src="/assets/img (2).jpg" alt="Event 2" />
+					<div class="skeleton skeleton-img" style="height:220px;"></div>
 				</div>
-				<!-- Slide 6 -->
 				<div class="swiper-slide">
-					<img src="/assets/img (6).jpg" alt="Event 6" />
+					<div class="skeleton skeleton-img" style="height:220px;"></div>
 				</div>
-				<!-- Slide 7 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (7).jpg" alt="Event 7" />
-				</div>
-				<!-- Slide 8 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (8).jpg" alt="Event 8" />
-				</div>
-				<!-- Slide 9 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (9).jpg" alt="Event 9" />
-				</div>
-				<!-- Slide 10 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (10).jpg" alt="Event 10" />
-				</div>
-				<!-- Slide 11 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (11).jpg" alt="Event 11" />
-				</div>
-				<!-- Slide 13 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (13).jpg" alt="Event 13" />
-				</div>
-				<!-- Slide 14 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (14).jpg" alt="Event 14" />
-				</div>
-				<!-- Slide 15 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (15).jpg" alt="Event 15" />
-				</div>
-				<!-- Slide 16 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (16).jpg" alt="Event 16" />
-				</div>
-				<!-- Slide 17 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (17).jpg" alt="Event 17" />
-				</div>
-				<!-- Slide 18 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (18).jpg" alt="Event 18" />
-				</div>
-				<!-- Slide 19 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (19).jpg" alt="Event 19" />
-				</div>
-				<!-- Slide 20 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (20).jpg" alt="Event 20" />
-				</div>
-				<!-- Slide 21 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (21).jpg" alt="Event 21" />
-				</div>
-				<!-- Slide 22 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (22).jpg" alt="Event 22" />
-				</div>
-				<!-- Slide 23 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (23).jpg" alt="Event 23" />
-				</div>
-				<!-- Slide 25 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (25).jpg" alt="Event 25" />
-				</div>
-				<!-- Slide 26 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (26).jpg" alt="Event 26" />
-				</div>
-				<!-- Slide 27 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (27).jpg" alt="Event 27" />
-				</div>
-				<!-- Slide 28 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (28).jpg" alt="Event 28" />
-				</div>
-				<!-- Slide 29 -->
-				<div class="swiper-slide">
-					<img src="/assets/img (29).jpg" alt="Event 29" />
+			</div>
+		</div>
+		<!-- Real gallery content -->
+		<div id="gallery-real-content" style="display:none;">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<!-- Slide 1 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (1).jpg" alt="Event 1" />
+					</div>
+					<!-- Slide 2 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (2).jpg" alt="Event 2" />
+					</div>
+					<!-- Slide 6 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (6).jpg" alt="Event 6" />
+					</div>
+					<!-- Slide 7 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (7).jpg" alt="Event 7" />
+					</div>
+					<!-- Slide 8 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (8).jpg" alt="Event 8" />
+					</div>
+					<!-- Slide 9 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (9).jpg" alt="Event 9" />
+					</div>
+					<!-- Slide 10 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (10).jpg" alt="Event 10" />
+					</div>
+					<!-- Slide 11 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (11).jpg" alt="Event 11" />
+					</div>
+					<!-- Slide 13 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (13).jpg" alt="Event 13" />
+					</div>
+					<!-- Slide 14 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (14).jpg" alt="Event 14" />
+					</div>
+					<!-- Slide 15 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (15).jpg" alt="Event 15" />
+					</div>
+					<!-- Slide 16 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (16).jpg" alt="Event 16" />
+					</div>
+					<!-- Slide 17 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (17).jpg" alt="Event 17" />
+					</div>
+					<!-- Slide 18 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (18).jpg" alt="Event 18" />
+					</div>
+					<!-- Slide 19 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (19).jpg" alt="Event 19" />
+					</div>
+					<!-- Slide 20 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (20).jpg" alt="Event 20" />
+					</div>
+					<!-- Slide 21 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (21).jpg" alt="Event 21" />
+					</div>
+					<!-- Slide 22 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (22).jpg" alt="Event 22" />
+					</div>
+					<!-- Slide 23 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (23).jpg" alt="Event 23" />
+					</div>
+					<!-- Slide 25 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (25).jpg" alt="Event 25" />
+					</div>
+					<!-- Slide 26 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (26).jpg" alt="Event 26" />
+					</div>
+					<!-- Slide 27 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (27).jpg" alt="Event 27" />
+					</div>
+					<!-- Slide 28 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (28).jpg" alt="Event 28" />
+					</div>
+					<!-- Slide 29 -->
+					<div class="swiper-slide">
+						<img src="/assets/img (29).jpg" alt="Event 29" />
+					</div>
 				</div>
 			</div>
 		</div>
