@@ -152,7 +152,52 @@
 		<div class="container mx-auto px-4">
 			<h2 class="text-4xl font-bold text-center mb-12">Featured Events</h2>
 			<div class="grid md:grid-cols-3 gap-8">
-
+				<!-- Prize Section as Grid Item -->
+				<div
+					class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-stretch border border-green-100 md:col-span-2">
+					<!-- Schools/Colleges Prize -->
+					<div
+						class="flex-1 flex flex-col items-center border-b md:border-b-0 md:border-r border-green-100 pb-6 md:pb-0 md:pr-8">
+						<!-- Prize image -->
+						<img src="/assets/prize-schools.png" alt="Schools/Colleges Prize"
+							class="w-full max-w-xs h-100 object-contain rounded-lg shadow mb-4 bg-white" />
+						<div class="text-4xl mb-4 text-primary">
+							<i class="fas fa-university"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-2 text-green-700 text-center">Exciting Prizes for
+							Schools/Colleges</h3>
+						<ul class="text-gray-700 text-lg space-y-3 mt-4 text-center">
+							<li>
+								<span class="font-semibold">Overall prize</span> - Most number of winners
+								<span class="ml-2 text-yellow-500 text-xl">🏆</span>
+							</li>
+							<li>
+								<span class="font-semibold">Overall prize</span> - Most number of participants
+							</li>
+						</ul>
+					</div>
+					<!-- Departments Prize -->
+					<div class="flex-1 flex flex-col items-center pt-6 md:pt-0 md:pl-8">
+						<!-- Prize image -->
+						<img src="/assets/prize-dept.png" alt="Departments Prize"
+							class="w-full max-w-xs h-100 object-contain rounded-lg shadow mb-4 bg-white" />
+						<div class="text-4xl mb-4 text-secondary">
+							<i class="fas fa-building"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-2 text-yellow-700 text-center">Exciting Prizes for Departments
+							(Amity)</h3>
+						<ul class="text-gray-700 text-lg space-y-3 mt-4 text-center">
+							<li>
+								<span class="font-semibold">Overall prize</span> - Most number of winners
+								<span class="ml-2 text-yellow-500 text-xl">🏆</span>
+							</li>
+							<li>
+								<span class="font-semibold">Overall prize</span> - Most number of participants
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- End Prize Section as Grid Item -->
 				<!-- Event Card 1 -->
 				<div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-date="1-May">
 					<div class="relative">
@@ -392,6 +437,7 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
@@ -819,7 +865,7 @@
 									class="text-white hover:text-pink-400">
 									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
 										<path
-											d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z" />
+											d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 002 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z" />
 									</svg>
 								</a>
 
@@ -860,7 +906,7 @@
 									class="text-white hover:text-pink-400">
 									<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
 										<path
-											d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z" />
+											d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 002 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3a5.25 5.25 0 110 10.5A5.25 5.25 0 0112 6.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm5.13-.38a.88.88 0 110 1.75.88.88 0 010-1.75z" />
 									</svg>
 								</a>
 
