@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			gallerySkeletons.style.display = "none";
 			galleryReal.style.display = "block";
 		}
-	}, 2500); // 2.5s skeleton loading
+	}, 2400); // 2.5s skeleton loading
 });
 
 // Event information for popup
