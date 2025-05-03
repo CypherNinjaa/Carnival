@@ -489,7 +489,7 @@ const timer = setInterval(function () {
 	if (timeLeft <= 0) {
 		clearInterval(timer);
 		document.getElementById("countdown").innerHTML =
-			"<p class='text-xl font-bold text-green-300'>🎉 The Event Has Started!</p>";
+			"<p class='text-xl font-bold text-green-300'>🎉 The Event Has Ended!</p>";
 		return;
 	}
 

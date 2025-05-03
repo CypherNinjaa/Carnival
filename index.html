@@ -96,6 +96,16 @@
 
 			<!-- Buttons -->
 			<div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+				<a href="/event-winners.html"
+					class="button-hover bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+					Event Winners
+				</a>
+				<a href="/gallery.html"
+					class="button-hover bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+					Gallery
+				</a>
+			</div>
+			<div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
 				<a href="#events"
 					class="button-hover bg-primary hover:bg-green-00 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">
 					Explore Events
@@ -1031,39 +1041,7 @@
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-	<!-- Registration Notice Popup -->
-	<div id="registration-popup" style="display: none;"
-		class="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-50">
-		<div class="bg-white rounded-xl shadow-2xl max-w-sm w-[90vw] p-6 text-center relative animate-[fadeIn_0.3s]">
-			<button id="close-registration-popup" aria-label="Close"
-				class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl font-bold focus:outline-none">
-				&times;
-			</button>
-			<div class="mb-4">
-				<i class="fas fa-exclamation-triangle text-yellow-500 text-4xl"></i>
-			</div>
-			<h2 class="text-lg md:text-xl font-bold mb-2 text-gray-800">Important Notice</h2>
-			<p class="text-gray-700 text-base md:text-lg">
-				Registrations made after <b>11AM on 1/05/2025</b> will not be considered valid.
-			</p>
-		</div>
-	</div>
-	<script>
-		// Show popup on page load
-		window.addEventListener('DOMContentLoaded', function () {
-			const popup = document.getElementById('registration-popup');
-			const closeBtn = document.getElementById('close-registration-popup');
-			if (popup && closeBtn) {
-				popup.style.display = 'flex';
-				// Close on button click
-				closeBtn.onclick = () => popup.style.display = 'none';
-				// Close on background click
-				popup.onclick = (e) => {
-					if (e.target === popup) popup.style.display = 'none';
-				};
-			}
-		});
-	</script>
+
 </body>
 
 </html>
