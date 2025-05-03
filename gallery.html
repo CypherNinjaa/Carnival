@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Carnivalesque 4.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/assets/android-chrome-512x512.png" type="image/png" />
+    <style>
+        /* Additional styles for skeletons and gallery */
+        .gallery-skeleton {
+            background: #e5e7eb;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            min-height: 220px;
+        }
+
+        .gallery-skeleton::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -150px;
+            height: 100%;
+            width: 150px;
+            background: linear-gradient(90deg, transparent, #f3f4f6 60%, transparent);
+            animation: skeleton-loading 1.2s infinite;
+        }
+
+        @keyframes skeleton-loading {
+            0% {
+                left: -150px;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            transition: transform 0.2s;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .gallery-img,
+        .gallery-video-thumb {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #f3f4f6;
+            display: block;
+        }
+
+        .gallery-video-thumb {
+            position: relative;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 16px;
+            color: #fff;
+            font-size: 2rem;
+            pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+
+            .gallery-img,
+            .gallery-video-thumb {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-md fixed top-0 left-0 z-40">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">
+                <span class="text-primary">CARNIV</span><span class="text-black">ALESQUE</span>
+                <span class="text-secondary">4.0</span>
+            </a>
+            <div class="space-x-6 hidden md:block">
+                <a href="/" class="nav-link text-gray-700 hover:text-primary">Home</a>
+                <a href="/gallery.html" class="nav-link text-primary font-bold underline">Gallery</a>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-1 pt-24 pb-10">
+        <section class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-6">Event Gallery</h1>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
+                <div>
+                    <label for="dateFilter" class="font-semibold mr-2">Sort by Date:</label>
+                    <select id="dateFilter" class="border rounded px-3 py-2 focus:outline-none focus:ring">
+                        <option value="all">All Dates</option>
+                        <option value="2025-04-30">30th April 2025</option>
+                        <option value="2025-05-01">1st May 2025</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Skeleton Loader -->
+            <div id="gallery-skeletons" class="gallery-grid">
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+            </div>
+            <!-- Gallery Content -->
+            <div id="gallery-content" style="display:none;">
+                <div id="gallery-grid" class="gallery-grid"></div>
+                <div id="no-images-message" class="text-center text-gray-500 mt-8 hidden">
+                    No images or videos found for the selected date.
+                </div>
+            </div>
+            <!-- Video Modal -->
+            <div id="video-modal"
+                class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+                <div class="bg-black rounded-lg overflow-hidden relative max-w-2xl w-full">
+                    <button id="close-video-modal"
+                        class="absolute top-2 right-2 text-white text-3xl z-10">&times;</button>
+                    <video id="modal-video" controls class="w-full h-auto bg-black" style="max-height:70vh;"></video>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-8 mt-10">
+        <div class="container mx-auto text-center">
+            © 2025 CARNIVALESQUE 4.0. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        // Gallery data: add your images/videos here
+        const galleryItems = [
+            // Images
+            { type: "image", src: "/assets/img (1).jpg", alt: "Event 1", date: "2025-04-30" },
+            { type: "image", src: "/assets/img (2).jpg", alt: "Event 2", date: "2025-04-30" },
+            { type: "image", src: "/assets/img (6).jpg", alt: "Event 6", date: "2025-05-01" },
+            { type: "image", src: "/assets/img (7).jpg", alt: "Event 7", date: "2025-05-01" },
+            { type: "image", src: "/assets/img (8).jpg", alt: "Event 8", date: "2025-04-30" },
+            { type: "image", src: "/assets/img (9).jpg", alt: "Event 9", date: "2025-05-01" },
+            // Videos (add your video files or YouTube links)
+            { type: "video", src: "/assets/event1.mp4", thumb: "/assets/img (1).jpg", alt: "Event 1 Video", date: "2025-04-30" },
+            { type: "video", src: "/assets/event2.mp4", thumb: "/assets/img (2).jpg", alt: "Event 2 Video", date: "2025-05-01" }
+        ];
+
+        function renderGallery(items) {
+            const grid = document.getElementById("gallery-grid");
+            grid.innerHTML = "";
+            items.forEach(item => {
+                if (item.type === "image") {
+                    const div = document.createElement("div");
+                    div.className = "gallery-item";
+                    div.innerHTML = `<img src="${item.src}" alt="${item.alt}" class="gallery-img" loading="lazy" />`;
+                    grid.appendChild(div);
+                } else if (item.type === "video") {
+                    const div = document.createElement("div");
+                    div.className = "gallery-item relative";
+                    div.innerHTML = `
+            <div class="gallery-video-thumb relative">
+              <img src="${item.thumb || '/assets/video-thumb.jpg'}" alt="${item.alt}" class="gallery-img" loading="lazy" />
+              <span class="play-icon"><svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><polygon fill="white" points="8,5 19,12 8,19"/></svg></span>
+            </div>
+          `;
+                    div.addEventListener("click", function () {
+                        openVideoModal(item.src);
+                    });
+                    grid.appendChild(div);
+                }
+            });
+        }
+
+        function showNoImagesMessage(show) {
+            document.getElementById("no-images-message").style.display = show ? "block" : "none";
+        }
+
+        function filterGalleryByDate(date) {
+            if (date === "all") return galleryItems;
+            return galleryItems.filter(item => item.date === date);
+        }
+
+        // Video modal logic
+        function openVideoModal(src) {
+            const modal = document.getElementById("video-modal");
+            const video = document.getElementById("modal-video");
+            video.src = src;
+            modal.classList.remove("hidden");
+            video.play();
+        }
+        function closeVideoModal() {
+            const modal = document.getElementById("video-modal");
+            const video = document.getElementById("modal-video");
+            video.pause();
+            video.currentTime = 0;
+            video.src = "";
+            modal.classList.add("hidden");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const skeletons = document.getElementById("gallery-skeletons");
+            const content = document.getElementById("gallery-content");
+            const dateFilter = document.getElementById("dateFilter");
+
+            // Simulate loading
+            setTimeout(() => {
+                skeletons.style.display = "none";
+                content.style.display = "block";
+                renderGallery(galleryItems);
+                showNoImagesMessage(galleryItems.length === 0);
+            }, 1500);
+
+            // Filter by date
+            dateFilter.addEventListener("change", function () {
+                const selected = this.value;
+                const filtered = filterGalleryByDate(selected);
+                renderGallery(filtered);
+                showNoImagesMessage(filtered.length === 0);
+            });
+
+            // Video modal close
+            document.getElementById("close-video-modal").onclick = closeVideoModal;
+            document.getElementById("video-modal").onclick = function (e) {
+                if (e.target === this) closeVideoModal();
+            };
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") closeVideoModal();
+            });
+        });
+    </script>
+</body>
+
+</html>
